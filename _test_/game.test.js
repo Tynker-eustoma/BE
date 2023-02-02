@@ -7,25 +7,8 @@ beforeAll(async () => {
 afterAll(async () => {
 })
 
-describe("Category", () => {
-    describe("GET /category", () => {
-        it("Should fetch category", () => {
-            return request(app)
-                .get("/category")
-                .then((response) => {
-                    expect(response.status).toBe(200)
-                    expect(response.body).toHaveProperty("games", expect.any(Array))
-                })
-        })
-
-        it("Should fetch category", () => {
-            return request(app)
-                .get("/category")
-                .then((response) => {
-                    expect(response.status).toBe(200)
-                    expect(response.body).toHaveProperty("games", expect.any(Array))
-                })
-        })
+describe("games", () => {
+    describe("GET /games", () => {
 
         it("Should fetch games all games based on category", () => {
             return request(app)
