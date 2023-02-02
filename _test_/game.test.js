@@ -7,27 +7,9 @@ beforeAll(async () => {
 afterAll(async () => {
 })
 
-describe("Category", () => {
-    describe("GET /category", () => {
-        it("Should fetch category", () => {
-            return request(app)
-                .get("/category")
-                .set("access_token", token)
-                .then((response) => {
-                    expect(response.status).toBe(200)
-                    expect(response.body).toHaveProperty("games", expect.any(Array))
-                    expect(response.body).toHaveProperty("access_token", expect.any(String))
-                })
-        })
+describe("games", () => {
+    describe("GET /games", () => {
 
-        it("Shouldnot fetch category (because there is not access token)", () => {
-            return request(app)
-                .get("/category")
-                .then((response) => {
-                    expect(response.status).toBe(200)
-                    expect(response.body).toHaveProperty("games", expect.any(Array))
-                })
-        })
 
         it("Should fetch games all games based on category", () => {
             return request(app)

@@ -20,6 +20,13 @@ const authenticationAdmin = async (req, res, next) => {
       }
 
 
+      req.user = {
+         lvlCount: findUser.lvl,
+         lvlGuess: findUser.lvlGuess, 
+         lvlLearn: findUser.lvlLearn
+      }
+
+
       next()
 
    } catch (error) {
