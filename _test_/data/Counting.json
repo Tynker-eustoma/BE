@@ -1,0 +1,25 @@
+[{
+  "id": 1,
+  "imgUrl": "https://i.imgur.com/9q8ZBR4.jpg",
+  "answer": "2",
+  "lvl": 1,
+  "question": "ada berapa macan dalam gambar tersebut? yuk coba hitung!",
+  "CategoryId": 1,
+  "optionA": "3",
+  "optionB": "1",
+  "optionC": "2",
+  "optionD": "4"
+}, {
+  "id": 1,
+  "imgUrl": "https://i.imgur.com/sEIxa5X.jpg",
+  "answer": "7",
+  "lvl": 2,
+  "question": "ada berapa sapi dalam gambar tersebut? yuk coba hitung!",
+  "CategoryId": 1,
+  "optionA": "6",
+  "optionB": "7",
+  "optionC": "5",
+  "optionD": "8"
+}, {
+  
+}]
