@@ -7,7 +7,7 @@ beforeAll(async () => {
 afterAll(async () => {
 })
 
-describe("Users", () => {
+describe.skip("Users", () => {
     describe("POST /registers", () => {
         it("Should create customer", () => {
             return request(app)

@@ -6,7 +6,6 @@ const {User, Category, Game} = require('../models')
 class ControllerUser {
 
    static async register(req, res, next) {
-
       try {
          const { username, email, password, age } = req.body;
 

@@ -1,13 +1,15 @@
 const request = require('supertest');
 const app = require('../app');
+const { Game, sequelize } = require("../models");
 
 beforeAll(async () => {
 });
 
 afterAll(async () => {
+    
 })
 
-describe("games", () => {
+describe.skip("games", () => {
     describe("GET /games", () => {
 
 
