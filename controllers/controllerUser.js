@@ -18,7 +18,7 @@ class ControllerUser {
             username: data.id,
          };
 
-         res.status(201).json({ message: "Success create user", newUser });
+         res.status(201).json({ messege: "Success create user", newUser });
 
    } catch(error){
 
@@ -37,13 +37,13 @@ class ControllerUser {
       });
 
       if (!data) {
-         throw { messege: "Invalid Email/Password" };
+         throw { name: "Invalid Email/Password" };
       }
 
       const validate = hashPassword(password, data.password);
 
       if (!validate) {
-         throw { messege: "Invalid Email/Password" };
+         throw { name: "Invalid Email/Password" };
       }
 
       const payload = {
@@ -112,17 +112,17 @@ class ControllerUser {
 
          if(data.CategoryId === 1 && lvlCount<data.lvl){
 
-            throw {messege: 'Your nooobs'}
+            throw {name: 'Your level is low to access this page'}
          }
 
          if(data.CategoryId === 2 && lvlGuess<data.lvl){
             
-            throw {messege: 'Your nooobs'} 
+            throw {name: 'Your level is low to access this page'} 
          }
 
          if(data.CategoryId === 3 && lvlLearn<data.lvl){
 
-            throw {messege: 'Your nooobs'}
+            throw {name: 'Your level is low to access this page'}
          }
 
          res.status(200).json(data)
@@ -143,7 +143,7 @@ class ControllerUser {
          //error handling
 
          if(+categoryId > 3) {
-            throw {messege: 'Category Id not found'}
+            throw {name: 'Category id not found'}
          }
 
          // Kondisi Update
@@ -179,7 +179,9 @@ class ControllerUser {
 
 
          res.status(200).json({messege: 'Success update level user with id =' + user.id})
+
       } catch (error) {
+         
          next(error)
       }
    }
