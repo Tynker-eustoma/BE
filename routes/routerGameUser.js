@@ -7,6 +7,8 @@ routerUser.post("/login", ControllerUser.login);
 
 routerUser.use(authentication)
 
-routerUser.get('/games/:categoryId', ControllerUser.getGameById)
+routerUser.get('/games/:categoryId', ControllerUser.getCategoryById)
+routerUser.get('/games/play/:id', ControllerUser.getGameByLevelAndCategory)
+routerUser.put('/games/update/:categoryId', ControllerUser.updateLevel)
 
 module.exports = routerUser;

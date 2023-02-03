@@ -13,17 +13,37 @@ app.use(router)
 app.use((err, req, res, next) => {
    
    let code = 500
-   let messege = {messege: 'Internal server error'}
+   let message = {message: 'Internal server error'}
 
-   if(err.messege === 'Invalid token' || err.name === 'JsonWebTokenError'){
-      messege.messege = 'Invalid token'
+   if(err.name === 'Invalid token' || err.name === 'JsonWebTokenError'){
+      code=401
+      message.message = 'Invalid token'
    } else if(err.name === 'SequelizeValidationError'){
-      messege.messege = err.errors[0].message
+      code=400
+      message.message = err.errors[0].message
+   } else if (err.name === 'Invalid Email/Password') {
+      code=401
+      message.message = err.name
+   } else if (err.name === 'Category id not found') {
+      code = 404
+      message.message = err.name
+   } else if (err.name === "Choice required for Counting & Guess games"){
+      code = 400
+      message.message = err.name
+   } else if (err.name === "Image Url required for Counting & Guess games"){
+      code = 400
+      message.message = err.name
+   } else if (err.name === 'Game id not found'){
+      code = 404
+      message.message = err.name
+   } else if (err.name === 'Your level is low to access this page'){
+      code = 401
+      message.message = err.name
    }
 
    console.log(err);
 
-   res.status(code).json(messege)
+   res.status(code).json(message)
 })
 
 app.listen(port, () => {

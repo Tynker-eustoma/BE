@@ -8,7 +8,7 @@ const authenticationAdmin = async (req, res, next) => {
       const {access_token} = req.headers;
 
       if(!access_token){
-         throw {messege: 'Invalid token'}
+         throw {name: 'Invalid token'}
       }
 
       const data = verifyToken(access_token)
@@ -16,11 +16,12 @@ const authenticationAdmin = async (req, res, next) => {
       const findUser = await User.findByPk(data.id)
 
       if(!findUser){
-         throw {messege: 'Invalid token'}
+         throw {name: 'Invalid token'}
       }
 
 
       req.user = {
+         id: findUser.id,
          lvlCount: findUser.lvl,
          lvlGuess: findUser.lvlGuess, 
          lvlLearn: findUser.lvlLearn
