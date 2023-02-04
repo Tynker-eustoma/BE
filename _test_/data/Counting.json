@@ -54,7 +54,6 @@
   "optionC": "2",
   "optionD": "5"
 }, {
-  "id": 6,
   "imgUrl": "https://i.imgur.com/A2su4Q6.png",
   "answer": "7",
   "lvl": 6,
@@ -65,7 +64,6 @@
   "optionC": "8",
   "optionD": "5"
 }, {
-  "id": 8,
   "imgUrl": "https://i.imgur.com/Gd9JmeS.png",
   "answer": "6",
   "lvl": 8,
@@ -76,7 +74,6 @@
   "optionC": "8",
   "optionD": "6"
 }, {
-  "id": 9,
   "imgUrl": "https://i.imgur.com/s01niJt.png",
   "answer": "8",
   "lvl": 9,
@@ -87,7 +84,6 @@
   "optionC": "9",
   "optionD": "6"
 },{
-  "id": 10,
   "imgUrl": "https://i.imgur.com/vQG1fFE.png",
   "answer": "5",
   "lvl": 10,
@@ -98,7 +94,6 @@
   "optionC": "9",
   "optionD": "6"
 }, {
-  "id": 11,
   "imgUrl": "https://i.imgur.com/vQG1fFE.png",
   "answer": "5",
   "lvl": 11,

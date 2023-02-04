@@ -2,20 +2,33 @@ const request = require('supertest');
 const app = require('../app');
 const { Game, sequelize } = require("../models");
 
+let token
 beforeAll(async () => {
+    try {
+        token = signToken({
+            id: 1,
+            role: "user",
+        });
+        const newData = JSON.parse(fs.readFileSync('./_test_/data/category.json', 'utf-8')).map(x => {
+            x.createdAt = x.updatedAt = new Date()
+            return x
+        })
+        await sequelize.queryInterface.bulkInsert('Categories', newData, {})
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 afterAll(async () => {
-    
+    await sequelize.queryInterface.bulkDelete("Games", null, { truncate: true, cascade: true, restartIdentity: true })
+    await sequelize.queryInterface.bulkDelete("Categories", null, { truncate: true, cascade: true, restartIdentity: true })
 })
 
 describe("games", () => {
     describe("GET /games", () => {
-
-
-        it("Should fetch games all games based on category", () => {
+        it.only("Should fetch games all games based on category", () => {
             return request(app)
-                .get('/category/:categoryId')
+                .get('/pub/games/:categoryId')
                 .set("access_token", token)
                 .then(((response) => {
                     expect(response.status).toBe(200)
