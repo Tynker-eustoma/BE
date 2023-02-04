@@ -9,7 +9,7 @@ afterAll(async () => {
     
 })
 
-describe.skip("games", () => {
+describe("games", () => {
     describe("GET /games", () => {
 
 

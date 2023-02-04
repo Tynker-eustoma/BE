@@ -1,52 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675487290386" clover="3.2.0">
-  <project timestamp="1675487290386" name="All files">
-    <metrics statements="302" coveredstatements="174" conditionals="94" coveredconditionals="23" methods="32" coveredmethods="18" elements="428" coveredelements="215" complexity="0" loc="302" ncloc="302" packages="6" files="15" classes="15"/>
+<coverage generated="1675496074141" clover="3.2.0">
+  <project timestamp="1675496074141" name="All files">
+    <metrics statements="305" coveredstatements="177" conditionals="94" coveredconditionals="23" methods="32" coveredmethods="18" elements="431" coveredelements="218" complexity="0" loc="305" ncloc="305" packages="6" files="16" classes="16"/>
     <package name="Backend">
-      <metrics statements="41" coveredstatements="24" conditionals="20" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\app.js">
-        <metrics statements="41" coveredstatements="24" conditionals="20" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
         <line num="3" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
         <line num="9" count="4" type="stmt"/>
         <line num="10" count="4" type="stmt"/>
         <line num="11" count="4" type="stmt"/>
-        <line num="13" count="4" type="stmt"/>
-        <line num="15" count="14" type="stmt"/>
-        <line num="16" count="14" type="stmt"/>
-        <line num="18" count="14" type="cond" truecount="3" falsecount="1"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="14" type="cond" truecount="4" falsecount="0"/>
-        <line num="22" count="10" type="stmt"/>
-        <line num="23" count="10" type="stmt"/>
-        <line num="24" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="25" count="4" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
-        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="43" count="14" type="stmt"/>
-        <line num="44" count="14" type="stmt"/>
-        <line num="45" count="14" type="stmt"/>
-        <line num="52" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
       </file>
     </package>
     <package name="Backend.controllers">
@@ -225,7 +197,7 @@
       </file>
     </package>
     <package name="Backend.middlewares">
-      <metrics statements="16" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="47" coveredstatements="18" conditionals="24" coveredconditionals="8" methods="2" coveredmethods="1"/>
       <file name="authentication.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\middlewares\authentication.js">
         <metrics statements="16" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
@@ -244,6 +216,40 @@
         <line num="32" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="40" count="4" type="stmt"/>
+      </file>
+      <file name="errorHandler.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\middlewares\errorHandler.js">
+        <metrics statements="31" coveredstatements="14" conditionals="20" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="4" count="14" type="stmt"/>
+        <line num="6" count="14" type="cond" truecount="3" falsecount="1"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="14" type="cond" truecount="4" falsecount="0"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="12" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="14" type="stmt"/>
+        <line num="32" count="14" type="stmt"/>
+        <line num="33" count="14" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
       </file>
     </package>
     <package name="Backend.models">
