@@ -15,13 +15,16 @@ module.exports = {
       answer: {
         type: Sequelize.STRING
       },
-      anotherChoice1: {
+      optionA: {
         type: Sequelize.STRING
       },
-      anotherChoice2: {
+      optionB: {
         type: Sequelize.STRING
       },
-      anotherChoice3: {
+      optionC: {
+        type: Sequelize.STRING
+      },
+      optionD: {
         type: Sequelize.STRING
       },
       lvl: {
