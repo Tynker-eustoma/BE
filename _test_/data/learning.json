@@ -1,76 +1,77 @@
-[{
-    "id": 1,
+[
+  {
     "answer": "one",
     "lvl": 1,
     "question": "sebutkan bahasa inggris dari angka satu"
-}, {
-  "id": 2,
-  "answer": "two",
-  "lvl": 2,
-  "question": "sebutkan bahasa inggris dari angka dua"
-}, {
-  "id": 3,
-  "answer": "three",
-  "lvl": 3,
-  "question": "sebutkan bahasa inggris dari angka tiga"
-}, {
-  "id": 4,
-  "answer": "four",
-  "lvl": 4,
-  "question": "sebutkan bahasa inggris dari angka empat"
-}, {
-  "id": 5,
-  "answer": "five",
-  "lvl": 5,
-  "question": "sebutkan bahasa inggris dari angka lima"
-}, {
-  "id": 6,
-  "answer": "six",
-  "lvl": 6,
-  "question": "sebutkan bahasa inggris dari angka enam"
-}, {
-  "id": 7,
-  "answer": "seven",
-  "lvl": 7,
-  "question": "sebutkan bahasa inggris dari angka tujuh"
-}, {
-  "id": 8,
-  "answer": "eight",
-  "lvl": 8,
-  "question": "sebutkan bahasa inggris dari angka delapan"
-}, {
-  "id": 9,
-  "answer": "nine",
-  "lvl": 9,
-  "question": "sebutkan bahasa inggris dari angka sembilan"
-}, {
-  "id": 10,
-  "answer": "ten",
-  "lvl": 10,
-  "question": "sebutkan bahasa inggris dari angka sepuluh"
-}, {
-  "id": 11,
-  "answer": "white",
-  "lvl": 11,
-  "question": "sebutkan bahasa inggris dari warna putih"
-}, {
-  "id": 12,
-  "answer": "black",
-  "lvl": 12,
-  "question": "sebutkan bahasa inggris dari angka hitam"
-}, {
-  "id": 13,
-  "answer": "blue",
-  "lvl": 13,
-  "question": "sebutkan bahasa inggris dari angka biru"
-}, {
-  "id": 14,
-  "answer": "red",
-  "lvl": 14,
-  "question": "sebutkan bahasa inggris dari angka merah"
-},{
-  "id": 15,
-  "answer": "green",
-  "lvl": 15,
-  "question": "sebutkan bahasa inggris dari angka hijau"
-}]
+  },
+  {
+    "answer": "two",
+    "lvl": 2,
+    "question": "sebutkan bahasa inggris dari angka dua"
+  },
+  {
+    "answer": "three",
+    "lvl": 3,
+    "question": "sebutkan bahasa inggris dari angka tiga"
+  },
+  {
+    "answer": "four",
+    "lvl": 4,
+    "question": "sebutkan bahasa inggris dari angka empat"
+  },
+  {
+    "answer": "five",
+    "lvl": 5,
+    "question": "sebutkan bahasa inggris dari angka lima"
+  },
+  {
+    "answer": "six",
+    "lvl": 6,
+    "question": "sebutkan bahasa inggris dari angka enam"
+  },
+  {
+    "answer": "seven",
+    "lvl": 7,
+    "question": "sebutkan bahasa inggris dari angka tujuh"
+  },
+  {
+    "answer": "eight",
+    "lvl": 8,
+    "question": "sebutkan bahasa inggris dari angka delapan"
+  },
+  {
+    "answer": "nine",
+    "lvl": 9,
+    "question": "sebutkan bahasa inggris dari angka sembilan"
+  },
+  {
+    "answer": "ten",
+    "lvl": 10,
+    "question": "sebutkan bahasa inggris dari angka sepuluh"
+  },
+  {
+    "answer": "white",
+    "lvl": 11,
+    "question": "sebutkan bahasa inggris dari warna putih"
+  },
+  {
+    "answer": "black",
+    "lvl": 12,
+    "question": "sebutkan bahasa inggris dari angka hitam"
+  },
+  {
+    "answer": "blue",
+    "lvl": 13,
+    "question": "sebutkan bahasa inggris dari angka biru"
+  },
+  {
+    "answer": "red",
+    "lvl": 14,
+    "question": "sebutkan bahasa inggris dari angka merah"
+  },
+  {
+    "answer": "green",
+    "lvl": 15,
+    "question": "sebutkan bahasa inggris dari angka hijau"
+  }
+]

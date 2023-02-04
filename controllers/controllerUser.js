@@ -90,8 +90,11 @@ class ControllerUser {
                CategoryId : categoryId
             }
          })
-
-         res.status(200).json(data)
+         if (data.length == 0){
+            throw {name: "Category id not found"}
+         } else {
+            res.status(200).json(data)
+         }
 
       } catch (error) {
          next(error)
@@ -110,6 +113,10 @@ class ControllerUser {
          const data = await Game.findOne({
             where: {id}
          })
+
+         if (!data){
+            throw {name: "Game id not found"}
+         }
 
          if(data.CategoryId === 1 && lvlCount<data.lvl){
 
@@ -179,7 +186,7 @@ class ControllerUser {
          }
 
 
-         res.status(200).json({messege: 'Success update level user with id =' + user.id})
+         res.status(200).json({message: 'Success update level user with id =' + user.id})
 
       } catch (error) {
          

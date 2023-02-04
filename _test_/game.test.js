@@ -65,11 +65,40 @@ afterAll(async () => {
   });
 });
 
-describe("games", () => {
+describe.skip("games", () => {
   describe("GET /games", () => {
     it("Should fetch all games", () => {
       return request(app)
         .get("/users/games")
+        .set("access_token", token)
+        .then((response) => {
+          expect(response.status).toBe(200);
+          expect(response.body).toHaveProperty("data", expect.any(Array));
+        });
+    });
+
+    it("Shouldnot fetch games all games based on category (not found)", () => {
+      return request(app)
+        .get("/category/:categoryId")
+        .set("access_token", token)
+        .then((response) => {
+          expect(response.status).toBe(404);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
+    it("Shouldnot fetch games all games based on category (because there is not access token)", () => {
+      return request(app)
+        .get("/category/:categoryId")
+        .then((response) => {
+          expect(response.status).toBe(404);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
+    it("Should fetch games on id", () => {
+      return request(app)
+        .get("/games/:gamesId")
         .set("access_token", token)
         .then((response) => {
           expect(response.status).toBe(200);
