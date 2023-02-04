@@ -23,7 +23,7 @@ const authenticationAdmin = async (req, res, next) => {
 
       req.user = {
          id: findUser.id,
-         lvlCount: findUser.lvl,
+         lvlCount: findUser.lvlCount,
          lvlGuess: findUser.lvlGuess, 
          lvlLearn: findUser.lvlLearn
       }
