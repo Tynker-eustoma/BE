@@ -1,4 +1,4 @@
-const { hashPassword } = require('../helpers/bcrypt')
+const { hashPassword, compareHash } = require('../helpers/bcrypt')
 const { signToken } = require('../helpers/jwt')
 const {User, Category, Game} = require('../models')
 
@@ -15,7 +15,7 @@ class ControllerAdmin {
 
          const newUser = {
             id: data.id, 
-            username: data.id
+            username: data.username
          }
 
          res.status(201).json({message: 'success create user', newUser})
@@ -45,7 +45,7 @@ class ControllerAdmin {
             throw {name: 'Invalid Email/Password'}
          }
 
-         const validate = hashPassword(password, data.password)
+         const validate = compareHash(password, data.password)
 
          if(!validate){
             throw {name: 'Invalid Email/Password'}

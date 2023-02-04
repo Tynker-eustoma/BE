@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon bin/www",
     "test": "jest --forceExit --runInBand --detectOpenHandles --coverage"
   },
   "repository": {
