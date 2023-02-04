@@ -4,7 +4,9 @@ const { signToken } = require("../helpers/jwt");
 const { User, sequelize } = require("../models");
 let token = ''
 
+let token
 beforeAll(async () => {
+<<<<<<< HEAD
   try {
     const user = await User.create({
       username: "customers1",
@@ -146,6 +148,55 @@ describe("games", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
+=======
+    try {
+        token = signToken({
+            id: 1,
+            role: "user",
+        });
+        const newData = JSON.parse(fs.readFileSync('./_test_/data/category.json', 'utf-8')).map(x => {
+            x.createdAt = x.updatedAt = new Date()
+            return x
+        })
+        await sequelize.queryInterface.bulkInsert('Categories', newData, {})
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+afterAll(async () => {
+    await sequelize.queryInterface.bulkDelete("Games", null, { truncate: true, cascade: true, restartIdentity: true })
+    await sequelize.queryInterface.bulkDelete("Categories", null, { truncate: true, cascade: true, restartIdentity: true })
+})
+
+describe("games", () => {
+    describe("GET /games", () => {
+        it.only("Should fetch games all games based on category", () => {
+            return request(app)
+                .get('/pub/games/:categoryId')
+                .set("access_token", token)
+                .then(((response) => {
+                    expect(response.status).toBe(200)
+                    expect(response.body).toHaveProperty("imgUrl", expect.any(String))
+                    expect(response.body).toHaveProperty("answer", expect.any(String))
+                    expect(response.body).toHaveProperty("lvl", expect.any(String))
+                    expect(response.body).toHaveProperty("categoryId", expect.any(Number))
+                    expect(response.body).toHaveProperty("Category", expect.any(Object))
+                    expect(response.body).toHaveProperty("access_token", expect.any(String))
+                    expect(response.body.Category).toHaveProperty("name", expect.any(String))
+                }))
+        })
+
+        it("Shouldnot fetch games all games based on category (not found)", () => {
+            return request(app)
+                .get('/category/:categoryId')
+                .set("access_token", token)
+                .then(((response) => {
+                    expect(response.status).toBe(404)
+                    expect(response.body).toHaveProperty("message", expect.any(String))
+                }))
+        })
+>>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 
     it("Shouldnot fetch games all games based on category (because there is not access token)", () => {
       return request(app)
