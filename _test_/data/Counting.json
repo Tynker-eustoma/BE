@@ -1,5 +1,4 @@
 [{
-  "id": 1,
   "imgUrl": "https://i.imgur.com/9q8ZBR4.jpg",
   "answer": "2",
   "lvl": 1,
@@ -10,7 +9,6 @@
   "optionC": "2",
   "optionD": "4"
 }, {
-  "id": 2,
   "imgUrl": "https://i.imgur.com/sEIxa5X.jpg",
   "answer": "7",
   "lvl": 2,
@@ -21,7 +19,6 @@
   "optionC": "5",
   "optionD": "8"
 }, {
-  "id": 3,
   "imgUrl": "https://i.imgur.com/152hco9.jpg",
   "answer": "5",
   "lvl": 3,
@@ -32,7 +29,6 @@
   "optionC": "6",
   "optionD": "3"
 },{
-  "id": 4,
   "imgUrl": "https://i.imgur.com/5XfGOeQ.jpg",
   "answer": "3",
   "lvl": 4,
@@ -43,7 +39,6 @@
   "optionC": "2",
   "optionD": "5"
 }, {
-  "id": 5,
   "imgUrl": "https://i.imgur.com/uV4XwKy.jpg",
   "answer": "2",
   "lvl": 5,

@@ -33,11 +33,7 @@ FN:196,(anonymous_7)
 FN:217,(anonymous_8)
 FN:248,(anonymous_9)
 FNF:10
-<<<<<<< HEAD
 FNH:1
-=======
-FNH:0
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 FNDA:0,(anonymous_0)
 FNDA:0,(anonymous_1)
 FNDA:0,(anonymous_2)
@@ -132,11 +128,7 @@ DA:289,0
 DA:292,0
 DA:298,4
 LF:83
-<<<<<<< HEAD
 LH:7
-=======
-LH:4
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 BRDA:44,0,0,0
 BRDA:44,0,1,0
 BRDA:50,1,0,0
@@ -287,30 +279,17 @@ SF:helpers\bcrypt.js
 FN:3,(anonymous_0)
 FN:7,(anonymous_1)
 FNF:2
-<<<<<<< HEAD
 FNH:1
 FNDA:1,(anonymous_0)
 FNDA:0,(anonymous_1)
 DA:1,4
 DA:3,4
 DA:4,1
-=======
-FNH:0
-FNDA:0,(anonymous_0)
-FNDA:0,(anonymous_1)
-DA:1,4
-DA:3,4
-DA:4,0
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 DA:7,4
 DA:8,0
 DA:11,4
 LF:6
-<<<<<<< HEAD
 LH:5
-=======
-LH:4
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 BRF:0
 BRH:0
 end_of_record
@@ -319,15 +298,9 @@ SF:helpers\jwt.js
 FN:4,(anonymous_0)
 FN:8,(anonymous_1)
 FNF:2
-<<<<<<< HEAD
 FNH:2
 FNDA:1,(anonymous_0)
 FNDA:1,(anonymous_1)
-=======
-FNH:1
-FNDA:1,(anonymous_0)
-FNDA:0,(anonymous_1)
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 DA:1,4
 DA:2,4
 DA:4,4
@@ -353,7 +326,6 @@ DA:6,1
 DA:8,1
 DA:9,1
 DA:11,1
-<<<<<<< HEAD
 DA:12,0
 DA:15,1
 DA:17,1
@@ -367,35 +339,15 @@ LF:16
 LH:13
 BRDA:11,0,0,0
 BRDA:11,0,1,1
-=======
-DA:12,1
-DA:15,0
-DA:17,0
-DA:19,0
-DA:20,0
-DA:24,0
-DA:32,0
-DA:35,1
-DA:40,4
-LF:16
-LH:10
-BRDA:11,0,0,1
-BRDA:11,0,1,0
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 BRDA:19,1,0,0
 BRDA:19,1,1,1
 BRF:4
-<<<<<<< HEAD
 BRH:2
-=======
-BRH:1
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 end_of_record
 TN:
 SF:middlewares\errorHandler.js
 FN:1,(anonymous_0)
 FNF:1
-<<<<<<< HEAD
 FNH:0
 FNDA:0,(anonymous_0)
 DA:1,4
@@ -404,16 +356,6 @@ DA:4,0
 DA:6,0
 DA:7,0
 DA:8,0
-=======
-FNH:1
-FNDA:1,(anonymous_0)
-DA:1,4
-DA:3,1
-DA:4,1
-DA:6,1
-DA:7,1
-DA:8,1
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 DA:9,0
 DA:10,0
 DA:11,0
@@ -435,7 +377,6 @@ DA:26,0
 DA:27,0
 DA:28,0
 DA:29,0
-<<<<<<< HEAD
 DA:31,0
 DA:32,0
 DA:33,0
@@ -445,17 +386,6 @@ LH:2
 BRDA:6,0,0,0
 BRDA:6,0,1,0
 BRDA:6,1,0,0
-=======
-DA:31,1
-DA:32,1
-DA:33,1
-DA:36,4
-LF:31
-LH:10
-BRDA:6,0,0,1
-BRDA:6,0,1,0
-BRDA:6,1,0,1
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 BRDA:6,1,1,0
 BRDA:9,2,0,0
 BRDA:9,2,1,0
@@ -474,11 +404,7 @@ BRDA:24,8,1,0
 BRDA:27,9,0,0
 BRDA:27,9,1,0
 BRF:20
-<<<<<<< HEAD
 BRH:0
-=======
-BRH:2
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 end_of_record
 TN:
 SF:models\category.js
@@ -510,7 +436,7 @@ DA:4,4
 DA:5,4
 DA:13,4
 DA:18,4
-DA:42,4
+DA:43,4
 LF:5
 LH:5
 BRF:0
@@ -568,27 +494,19 @@ FN:6,(anonymous_0)
 FN:13,(anonymous_1)
 FN:94,(anonymous_2)
 FNF:3
-FNH:2
+FNH:3
 FNDA:4,(anonymous_0)
 FNDA:4,(anonymous_1)
-<<<<<<< HEAD
 FNDA:1,(anonymous_2)
-=======
-FNDA:0,(anonymous_2)
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 DA:4,4
 DA:5,4
 DA:6,4
 DA:17,4
 DA:94,4
-<<<<<<< HEAD
 DA:95,1
-=======
-DA:95,0
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
 DA:97,4
 LF:7
-LH:6
+LH:7
 BRF:0
 BRH:0
 end_of_record

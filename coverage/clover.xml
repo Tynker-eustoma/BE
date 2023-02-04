@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<coverage generated="1675500345185" clover="3.2.0">
-  <project timestamp="1675500345212" name="All files">
+<coverage generated="1675515774291" clover="3.2.0">
+  <project timestamp="1675515774292" name="All files">
     <metrics statements="305" coveredstatements="138" conditionals="94" coveredconditionals="9" methods="32" coveredmethods="15" elements="431" coveredelements="162" complexity="0" loc="305" ncloc="305" packages="6" files="16" classes="16"/>
-=======
-<coverage generated="1675500188735" clover="3.2.0">
-  <project timestamp="1675500188735" name="All files">
-    <metrics statements="305" coveredstatements="137" conditionals="94" coveredconditionals="10" methods="32" coveredmethods="12" elements="431" coveredelements="159" complexity="0" loc="305" ncloc="305" packages="6" files="16" classes="16"/>
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
     <package name="Backend">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="app.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\app.js">
+      <file name="app.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\app.js">
         <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
@@ -28,15 +22,9 @@
       </file>
     </package>
     <package name="Backend.controllers">
-<<<<<<< HEAD
       <metrics statements="144" coveredstatements="11" conditionals="60" coveredconditionals="0" methods="16" coveredmethods="1"/>
       <file name="controllerAdmin.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\controllers\controllerAdmin.js">
         <metrics statements="83" coveredstatements="7" conditionals="36" coveredconditionals="0" methods="10" coveredmethods="1"/>
-=======
-      <metrics statements="144" coveredstatements="8" conditionals="60" coveredconditionals="0" methods="16" coveredmethods="0"/>
-      <file name="controllerAdmin.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\controllers\controllerAdmin.js">
-        <metrics statements="83" coveredstatements="4" conditionals="36" coveredconditionals="0" methods="10" coveredmethods="0"/>
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
         <line num="3" count="4" type="stmt"/>
@@ -121,11 +109,7 @@
         <line num="292" count="0" type="stmt"/>
         <line num="298" count="4" type="stmt"/>
       </file>
-<<<<<<< HEAD
       <file name="controllerUser.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\controllers\controllerUser.js">
-=======
-      <file name="controllerUser.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\controllers\controllerUser.js">
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
         <metrics statements="61" coveredstatements="4" conditionals="24" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
@@ -191,32 +175,18 @@
       </file>
     </package>
     <package name="Backend.helpers">
-<<<<<<< HEAD
       <metrics statements="13" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
       <file name="bcrypt.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\helpers\bcrypt.js">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="4" type="stmt"/>
         <line num="3" count="4" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-=======
-      <metrics statements="13" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-      <file name="bcrypt.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\helpers\bcrypt.js">
-        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
         <line num="7" count="4" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="11" count="4" type="stmt"/>
       </file>
-<<<<<<< HEAD
       <file name="jwt.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\helpers\jwt.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-=======
-      <file name="jwt.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\helpers\jwt.js">
-        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
@@ -227,15 +197,9 @@
       </file>
     </package>
     <package name="Backend.middlewares">
-<<<<<<< HEAD
       <metrics statements="47" coveredstatements="15" conditionals="24" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="authentication.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\middlewares\authentication.js">
         <metrics statements="16" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
-=======
-      <metrics statements="47" coveredstatements="20" conditionals="24" coveredconditionals="3" methods="2" coveredmethods="2"/>
-      <file name="authentication.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\middlewares\authentication.js">
-        <metrics statements="16" coveredstatements="10" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
@@ -243,7 +207,6 @@
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
-<<<<<<< HEAD
         <line num="12" count="0" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
@@ -262,26 +225,6 @@
         <line num="6" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-=======
-        <line num="12" count="1" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="40" count="4" type="stmt"/>
-      </file>
-      <file name="errorHandler.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\middlewares\errorHandler.js">
-        <metrics statements="31" coveredstatements="10" conditionals="20" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="cond" truecount="2" falsecount="2"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
         <line num="9" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -303,21 +246,15 @@
         <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="28" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
-<<<<<<< HEAD
         <line num="31" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
-=======
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
         <line num="36" count="4" type="stmt"/>
       </file>
     </package>
     <package name="Backend.models">
-      <metrics statements="38" coveredstatements="36" conditionals="10" coveredconditionals="7" methods="10" coveredmethods="9"/>
-      <file name="category.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\models\category.js">
+      <metrics statements="38" coveredstatements="37" conditionals="10" coveredconditionals="7" methods="10" coveredmethods="10"/>
+      <file name="category.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\models\category.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
@@ -325,15 +262,15 @@
         <line num="18" count="4" type="stmt"/>
         <line num="24" count="4" type="stmt"/>
       </file>
-      <file name="game.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\models\game.js">
+      <file name="game.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\models\game.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="13" count="4" type="stmt"/>
         <line num="18" count="4" type="stmt"/>
-        <line num="42" count="4" type="stmt"/>
+        <line num="43" count="4" type="stmt"/>
       </file>
-      <file name="index.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\models\index.js">
+      <file name="index.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\models\index.js">
         <metrics statements="21" coveredstatements="20" conditionals="10" coveredconditionals="7" methods="3" coveredmethods="3"/>
         <line num="3" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
@@ -357,24 +294,20 @@
         <line num="41" count="4" type="stmt"/>
         <line num="43" count="4" type="stmt"/>
       </file>
-      <file name="user.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\models\user.js">
-        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <file name="user.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\models\user.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
         <line num="17" count="4" type="stmt"/>
         <line num="94" count="4" type="stmt"/>
-<<<<<<< HEAD
         <line num="95" count="1" type="stmt"/>
-=======
-        <line num="95" count="0" type="stmt"/>
->>>>>>> 1978b0225503561f900bfd85cef75f8ecaa5938b
         <line num="97" count="4" type="stmt"/>
       </file>
     </package>
     <package name="Backend.routes">
       <metrics statements="50" coveredstatements="50" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="router.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\routes\router.js">
+      <file name="router.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\routes\router.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
@@ -387,7 +320,7 @@
         <line num="10" count="4" type="stmt"/>
         <line num="12" count="4" type="stmt"/>
       </file>
-      <file name="routerCategoryAdmin.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\routes\routerCategoryAdmin.js">
+      <file name="routerCategoryAdmin.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\routes\routerCategoryAdmin.js">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
@@ -399,7 +332,7 @@
         <line num="10" count="4" type="stmt"/>
         <line num="13" count="4" type="stmt"/>
       </file>
-      <file name="routerCategoryUser.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\routes\routerCategoryUser.js">
+      <file name="routerCategoryUser.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\routes\routerCategoryUser.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
@@ -408,7 +341,7 @@
         <line num="7" count="4" type="stmt"/>
         <line num="10" count="4" type="stmt"/>
       </file>
-      <file name="routerGameAdmin.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\routes\routerGameAdmin.js">
+      <file name="routerGameAdmin.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\routes\routerGameAdmin.js">
         <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
@@ -426,7 +359,7 @@
         <line num="19" count="4" type="stmt"/>
         <line num="22" count="4" type="stmt"/>
       </file>
-      <file name="routerGameUser.js" path="C:\Users\dikya\Downloads\Hactiv8\Project Phase 3\Backend\routes\routerGameUser.js">
+      <file name="routerGameUser.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\routes\routerGameUser.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>

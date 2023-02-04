@@ -29,9 +29,10 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
     },
-    anotherChoice1: DataTypes.STRING,
-    anotherChoice2: DataTypes.STRING,
-    anotherChoice3: DataTypes.STRING,
+    optionA: DataTypes.STRING,
+    optionB: DataTypes.STRING,
+    optionC: DataTypes.STRING,
+    optionD: DataTypes.STRING,
     lvl: DataTypes.INTEGER,
     question: DataTypes.STRING,
     CategoryId: DataTypes.INTEGER
