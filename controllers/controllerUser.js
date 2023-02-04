@@ -1,4 +1,4 @@
-const { hashPassword } = require("../helpers/bcrypt");
+const { compareHash } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const {User, Category, Game} = require('../models')
 
@@ -6,7 +6,6 @@ const {User, Category, Game} = require('../models')
 class ControllerUser {
 
    static async register(req, res, next) {
-
       try {
          const { username, email, password, age } = req.body;
 
@@ -15,8 +14,10 @@ class ControllerUser {
 
          const newUser = {
             id: data.id,
-            username: data.id,
+            username: data.username,
          };
+
+         console.log(newUser, "<<<<<<<<<<<<<<<<<<<")
 
          res.status(201).json({ messege: "Success create user", newUser });
 
@@ -40,7 +41,7 @@ class ControllerUser {
          throw { name: "Invalid Email/Password" };
       }
 
-      const validate = hashPassword(password, data.password);
+      const validate = compareHash(password, data.password);
 
       if (!validate) {
          throw { name: "Invalid Email/Password" };
