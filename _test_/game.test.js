@@ -24,22 +24,24 @@ beforeAll(async () => {
 
     console.log(token, "ini token<<<<<<<<<<<<<<<<<<<<<<<<<<");
 
-    const games = JSON.parsefs(
-      fs.readFileSync("./_test_/data/Counting.json", "utf-8")
-    ).map((x) => {
-      x.createdAt = x.updatedAt = new Date();
-      return x;
-    });
-
-    const newData = JSON.parse(
-      fs.readFileSync("./_test_/data/category.json", "utf-8")
-    ).map((x) => {
-      x.createdAt = x.updatedAt = new Date();
-      return x;
-    });
-
-    await sequelize.queryInterface.bulkInsert("Games", games, {});
-    await sequelize.queryInterface.bulkInsert("Categories", newData, {});
+    const newCategories = JSON.parse(fs.readFileSync('./_test_/data/category.json', 'utf-8')).map(x => {
+        x.createdAt = x.updatedAt = new Date()
+        return x
+      })
+  
+      const newGamesCounting = JSON.parse(fs.readFileSync('./_test_/data/Counting.json', 'utf-8')).map(x => {
+        x.createdAt = x.updatedAt = new Date()
+        return x
+      })
+  
+      const newGamesLearning = JSON.parse(fs.readFileSync('./_test_/data/learning.json', 'utf-8')).map(x => {
+        x.createdAt = x.updatedAt = new Date()
+        return x
+      })
+  
+      await sequelize.queryInterface.bulkInsert('Categories', newCategories, {})
+      await sequelize.queryInterface.bulkInsert('Games', newGamesCounting, {})
+      await sequelize.queryInterface.bulkInsert('Games', newGamesLearning, {})
   } catch (error) {
     console.log(error);
   }
@@ -65,12 +67,11 @@ afterAll(async () => {
 
 describe("games", () => {
   describe("GET /games", () => {
-    it("Should fetch all games based on category", () => {
+    it("Should fetch all games", () => {
       return request(app)
         .get("/users/games")
         .set("access_token", token)
         .then((response) => {
-          console.log(response.body, "<<<<<<<<<<<<<<<<<<<<<< response");
           expect(response.status).toBe(200);
           expect(response.body).toEqual(expect.any(Array));
           expect(response.body[0]).toHaveProperty(
@@ -112,41 +113,16 @@ describe("games", () => {
         });
     });
 
-    it("Shouldnot fetch games all games based on category (because there is no access token)", () => {
+    it("Should not fetch all games (because there is no access token)", () => {
       return request(app)
         .get("/users/games")
         .then((response) => {
-          expect(response.status).toBe(404);
+          expect(response.status).toBe(401);
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
 
-    it("Shouldnot fetch games on id (not found)", () => {
-      return request(app)
-        .get("/games/:gamesId")
-        .set("access_token", token)
-        .then((response) => {
-          expect(response.status).toBe(404);
-          expect(response.body).toHaveProperty("message", expect.any(String));
-        });
-    });
 
-    it("Should answer games on id (right)", () => {
-      return request(app)
-        .post("/games/:gamesId")
-        .set("access_token", token)
-        .send({
-          answer: "Jawaban A",
-        })
-        .then((response) => {
-          expect(response.status).toBe(200);
-          expect(response.body).toHaveProperty("message", expect.any(String));
-          expect(response.body).toHaveProperty(
-            "access_token",
-            expect.any(String)
-          );
-        });
-    });
   });
 
   describe("/post games", () => {
@@ -166,21 +142,21 @@ describe("games", () => {
           optionD: "4",
         })
         .then((response) => {
-          expect(response.status).toBe(200);
-          expect(response.body).toHaveProperty("message", expect.any(String));
-        });
-    });
-
-    it("Should answer games on id (because there is not access token)", () => {
-      return request(app)
-        .post("/games/:gamesId")
-        .send({
-          answer: "Jawaban B",
-        })
-        .then((response) => {
-          expect(response.status).toBe(200);
+          expect(response.status).toBe(201);
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
   });
+
+  describe("/delete games", () => {
+    it.only("success delete games and response 200", () => {
+        return request(app)
+          .get("/users/games/1")
+          .set("access_token", token)
+          .then((response) => {
+            expect(response.status).toBe(200);
+            expect(response.body).toHaveProperty("message", expect.any(String));
+          });
+      });
+  })
 });

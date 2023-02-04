@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675515774291" clover="3.2.0">
-  <project timestamp="1675515774292" name="All files">
-    <metrics statements="305" coveredstatements="138" conditionals="94" coveredconditionals="9" methods="32" coveredmethods="15" elements="431" coveredelements="162" complexity="0" loc="305" ncloc="305" packages="6" files="16" classes="16"/>
+<coverage generated="1675518136711" clover="3.2.0">
+  <project timestamp="1675518136711" name="All files">
+    <metrics statements="306" coveredstatements="135" conditionals="96" coveredconditionals="9" methods="32" coveredmethods="14" elements="434" coveredelements="158" complexity="0" loc="306" ncloc="306" packages="6" files="16" classes="16"/>
     <package name="Backend">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\app.js">
@@ -22,9 +22,9 @@
       </file>
     </package>
     <package name="Backend.controllers">
-      <metrics statements="144" coveredstatements="11" conditionals="60" coveredconditionals="0" methods="16" coveredmethods="1"/>
+      <metrics statements="145" coveredstatements="8" conditionals="62" coveredconditionals="0" methods="16" coveredmethods="0"/>
       <file name="controllerAdmin.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\controllers\controllerAdmin.js">
-        <metrics statements="83" coveredstatements="7" conditionals="36" coveredconditionals="0" methods="10" coveredmethods="1"/>
+        <metrics statements="84" coveredstatements="4" conditionals="38" coveredconditionals="0" methods="10" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
         <line num="3" count="4" type="stmt"/>
@@ -75,39 +75,40 @@
         <line num="158" count="0" type="stmt"/>
         <line num="165" count="0" type="stmt"/>
         <line num="173" count="0" type="stmt"/>
-        <line num="175" count="0" type="cond" truecount="0" falsecount="8"/>
+        <line num="175" count="0" type="cond" truecount="0" falsecount="10"/>
         <line num="177" count="0" type="stmt"/>
         <line num="180" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="182" count="0" type="stmt"/>
         <line num="185" count="0" type="stmt"/>
         <line num="187" count="0" type="stmt"/>
         <line num="190" count="0" type="stmt"/>
-        <line num="199" count="1" type="stmt"/>
-        <line num="201" count="1" type="stmt"/>
-        <line num="208" count="1" type="stmt"/>
+        <line num="199" count="0" type="stmt"/>
+        <line num="201" count="0" type="stmt"/>
+        <line num="208" count="0" type="stmt"/>
         <line num="211" count="0" type="stmt"/>
         <line num="219" count="0" type="stmt"/>
         <line num="221" count="0" type="stmt"/>
         <line num="223" count="0" type="stmt"/>
-        <line num="229" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="230" count="0" type="stmt"/>
-        <line num="233" count="0" type="stmt"/>
-        <line num="239" count="0" type="stmt"/>
-        <line num="243" count="0" type="stmt"/>
-        <line num="251" count="0" type="stmt"/>
+        <line num="225" count="0" type="stmt"/>
+        <line num="231" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="232" count="0" type="stmt"/>
+        <line num="235" count="0" type="stmt"/>
+        <line num="241" count="0" type="stmt"/>
+        <line num="245" count="0" type="stmt"/>
         <line num="253" count="0" type="stmt"/>
-        <line num="261" count="0" type="stmt"/>
-        <line num="263" count="0" type="cond" truecount="0" falsecount="8"/>
-        <line num="265" count="0" type="stmt"/>
-        <line num="268" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="270" count="0" type="stmt"/>
-        <line num="273" count="0" type="stmt"/>
-        <line num="279" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="280" count="0" type="stmt"/>
-        <line num="283" count="0" type="stmt"/>
-        <line num="289" count="0" type="stmt"/>
-        <line num="292" count="0" type="stmt"/>
-        <line num="298" count="4" type="stmt"/>
+        <line num="255" count="0" type="stmt"/>
+        <line num="263" count="0" type="stmt"/>
+        <line num="265" count="0" type="cond" truecount="0" falsecount="8"/>
+        <line num="267" count="0" type="stmt"/>
+        <line num="270" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="272" count="0" type="stmt"/>
+        <line num="275" count="0" type="stmt"/>
+        <line num="281" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="282" count="0" type="stmt"/>
+        <line num="285" count="0" type="stmt"/>
+        <line num="291" count="0" type="stmt"/>
+        <line num="294" count="0" type="stmt"/>
+        <line num="300" count="4" type="stmt"/>
       </file>
       <file name="controllerUser.js" path="D:\Melissa\hacktiv8\phase3\final-project\Backend\controllers\controllerUser.js">
         <metrics statements="61" coveredstatements="4" conditionals="24" coveredconditionals="0" methods="6" coveredmethods="0"/>

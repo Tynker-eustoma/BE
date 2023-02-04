@@ -220,6 +220,8 @@ class ControllerAdmin {
          
          const {id} = req.params
 
+         console.log(id, "<<<<<<<<<<<<<<<<<<<<ini id <<<<<<<")
+
          const check = await Game.findOne({
             where: {
                id
