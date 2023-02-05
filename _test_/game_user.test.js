@@ -51,7 +51,7 @@ afterAll(async () => {
   });
 });
 
-describe.skip("GET /games", () => {
+describe("GET /games", () => {
   it("Should fetch games all games based on category 1 (Counting)", () => {
     return request(app)
       .get("/pub/games/1")

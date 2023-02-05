@@ -64,7 +64,7 @@ afterAll(async () => {
   });
 });
 
-describe.only("games", () => {
+describe("games", () => {
   describe("GET /games", () => {
     it("Should fetch all games", () => {
       return request(app)

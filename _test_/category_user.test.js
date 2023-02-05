@@ -34,7 +34,7 @@ afterAll(async () => {
   await sequelize.queryInterface.bulkDelete("Users", null, { truncate: true, cascade: true, restartIdentity: true });
 })
 
-describe.skip("Category", () => {
+describe("Category", () => {
   describe("GET /category", () => {
     it("Should fetch category", () => {
       return request(app)
