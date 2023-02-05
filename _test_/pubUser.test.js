@@ -36,10 +36,10 @@ afterAll(async () => {
 });
 
 describe.skip("api user", () => {
-  describe("POST /users/register", () => {
+  describe("POST /pub/register", () => {
     test("should create new user and response 201", () => {
       return request(app)
-        .post("/users/register")
+        .post("/pub/register")
         .send({
           username: "customers3",
           email: "customers3@gmail.com",
@@ -66,7 +66,7 @@ describe.skip("api user", () => {
 
     test("create users without input email and response 400", () => {
       return request(app)
-        .post("/users/register")
+        .post("/pub/register")
         .send({
           username: "customers3",
           password: hashPassword("password"),
@@ -84,7 +84,7 @@ describe.skip("api user", () => {
 
     test("create users without input password and response 400", () => {
       return request(app)
-        .post("/users/register")
+        .post("/pub/register")
         .send({
           username: "customers4",
           email: "customers4@gmail.com",
@@ -105,7 +105,7 @@ describe.skip("api user", () => {
 
     test("create users with email: `` and response 400", () => {
       return request(app)
-        .post("/users/register")
+        .post("/pub/register")
         .send({
           username: "customers3",
           email: "",
@@ -125,7 +125,7 @@ describe.skip("api user", () => {
 
     test("create users with input email already exists and response 400", () => {
       return request(app)
-        .post("/users/register")
+        .post("/pub/register")
         .send({
           username: "customers1",
           email: "customers1@gmail.com",
@@ -147,7 +147,7 @@ describe.skip("api user", () => {
 
     test("create users with wrong format email and response 400", () => {
       return request(app)
-        .post("/users/register")
+        .post("/pub/register")
         .send({
           username: "customers4",
           email: "customers4",
@@ -169,10 +169,10 @@ describe.skip("api user", () => {
   }),
 
 
-    describe("POST /users/login", () => {
+    describe("POST /pub/login", () => {
       test("success login and response 200", () => {
         return request(app)
-          .post("/users/login")
+          .post("/pub/login")
           .send({
             email: "customers1@gmail.com",
             password: "password",
@@ -188,7 +188,7 @@ describe.skip("api user", () => {
 
       test("failed login with wrong password and response 401", () => {
         return request(app)
-          .post("/users/login")
+          .post("/pub/login")
           .send({
             email: "customers1@gmail.com",
             password: "pass",
@@ -204,7 +204,7 @@ describe.skip("api user", () => {
 
       test("failed login with wrong email and response 401", () => {
         return request(app)
-          .post("/users/login")
+          .post("/pub/login")
           .send({
             email: "customers11111111@gmail.com",
             password: "password",

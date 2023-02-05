@@ -1,4 +1,4 @@
-const { hashPassword } = require("../helpers/bcrypt");
+const { compareHash } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const {User, Category, Game} = require('../models')
 
@@ -6,7 +6,6 @@ const {User, Category, Game} = require('../models')
 class ControllerUser {
 
    static async register(req, res, next) {
-
       try {
          const { username, email, password, age } = req.body;
 
@@ -15,10 +14,12 @@ class ControllerUser {
 
          const newUser = {
             id: data.id,
-            username: data.id,
+            username: data.username,
          };
 
-         res.status(201).json({ message: "Success create user", newUser });
+         console.log(newUser, "<<<<<<<<<<<<<<<<<<<")
+
+         res.status(201).json({ messege: "Success create user", newUser });
 
    } catch(error){
 
@@ -37,13 +38,13 @@ class ControllerUser {
       });
 
       if (!data) {
-         throw { messege: "Invalid Email/Password" };
+         throw { name: "Invalid Email/Password" };
       }
 
-      const validate = hashPassword(password, data.password);
+      const validate = compareHash(password, data.password);
 
       if (!validate) {
-         throw { messege: "Invalid Email/Password" };
+         throw { name: "Invalid Email/Password" };
       }
 
       const payload = {
@@ -78,21 +79,22 @@ class ControllerUser {
    }
 
 
-   static async getGameById (req, res, next){
+   static async getCategoryById (req, res, next){
 
       try {
 
          const {categoryId} = req.params
-
-         console.log(categoryId, ">>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<");
          
          const data = await Game.findAll({
             where: {
                CategoryId : categoryId
             }
          })
-
-         res.status(200).json(data)
+         if (data.length == 0){
+            throw {name: "Category id not found"}
+         } else {
+            res.status(200).json(data)
+         }
 
       } catch (error) {
          next(error)
@@ -105,10 +107,90 @@ class ControllerUser {
       
       try {
 
+         const {id} = req.params
+         const {lvlCount, lvlGuess, lvlLearn} = req.user
+
+         const data = await Game.findOne({
+            where: {id}
+         })
+
+         if (!data){
+            throw {name: "Game id not found"}
+         }
+
+         if(data.CategoryId === 1 && lvlCount<data.lvl){
+
+            throw {name: 'Your level is low to access this page'}
+         }
+
+         if(data.CategoryId === 2 && lvlGuess<data.lvl){
+            
+            throw {name: 'Your level is low to access this page'} 
+         }
+
+         if(data.CategoryId === 3 && lvlLearn<data.lvl){
+
+            throw {name: 'Your level is low to access this page'}
+         }
+
+         res.status(200).json(data)
+      } catch (error) {
+         next(error)
+      }
+   }
+
+   static async updateLevel(req, res, next){
+      
+
+      try {
          
+         const {categoryId} = req.params
+
+         const user = await User.findByPk(req.user.id)
+
+         //error handling
+
+         if(+categoryId > 3) {
+            throw {name: 'Category id not found'}
+         }
+
+         // Kondisi Update
+
+         if(+categoryId === 1){
+            const lvlCount = user.lvlCount + 1
+            await User.update({lvlCount}, {
+               where: {
+                  id : req.user.id
+               }
+            })
+         }
+
+         if(+categoryId === 2){
+
+            const lvlGuess = user.lvlGuess + 1
+            await User.update({lvlGuess}, {
+               where: {
+                  id : req.user.id
+               }
+            })
+         }
+
+         if(+categoryId === 3){
+
+            const lvlLearn = user.lvlLearn + 1
+            await User.update({lvlLearn}, {
+               where: {
+                  id : req.user.id
+               }
+            })
+         }
+
+
+         res.status(200).json({message: 'Success update level user with id =' + user.id})
 
       } catch (error) {
          
+         next(error)
       }
    }
 }

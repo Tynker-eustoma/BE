@@ -1,4 +1,4 @@
-const { hashPassword } = require('../helpers/bcrypt')
+const { hashPassword, compareHash } = require('../helpers/bcrypt')
 const { signToken } = require('../helpers/jwt')
 const {User, Category, Game} = require('../models')
 
@@ -15,7 +15,7 @@ class ControllerAdmin {
 
          const newUser = {
             id: data.id, 
-            username: data.id
+            username: data.username
          }
 
          res.status(201).json({message: 'success create user', newUser})
@@ -42,13 +42,13 @@ class ControllerAdmin {
          })
 
          if(!data){
-            throw {messege: 'Invalid Email/Password'}
+            throw {name: 'Invalid Email/Password'}
          }
 
-         const validate = hashPassword(password, data.password)
+         const validate = compareHash(password, data.password)
 
          if(!validate){
-            throw {messege: 'Invalid Email/Password'}
+            throw {name: 'Invalid Email/Password'}
          }
 
          const payload = {
@@ -73,7 +73,7 @@ class ControllerAdmin {
 
          await Category.create({name})
 
-         res.status(201).json({messege: `Create category ${name} success`})
+         res.status(201).json({message: `Create category ${name} success`})
 
       } catch (error) {
          next(error)
@@ -110,7 +110,7 @@ class ControllerAdmin {
          })
 
          if(!check){
-            throw {messege: 'Category not found'}
+            throw {name: 'Category id not found'}
          }
          
          await Category.destroy({
@@ -119,7 +119,7 @@ class ControllerAdmin {
             }
          })
 
-         res.status(200).json({messege: `Success delete category with id = ${id}`})
+         res.status(200).json({message: `Success delete category with id = ${id}`})
 
       } catch (error) {
          
@@ -142,7 +142,7 @@ class ControllerAdmin {
          })
 
          if(!check){
-            throw {messege: 'Category not found'}
+            throw {name: 'Category id not found'}
          }
 
          await Category.update({name}, {
@@ -151,7 +151,7 @@ class ControllerAdmin {
             }
          })
 
-         res.status(200).json({messege: `Success update category whit id = ${id}`})
+         res.status(200).json({message: `Success update category whit id = ${id}`})
 
       } catch (error) {
          
@@ -165,26 +165,26 @@ class ControllerAdmin {
       try {
          
          const {imgUrl, 
-            answer, anotherChoice1, 
-            anotherChoice2, 
-            anotherChoice3, lvl,
+            answer, optionA, 
+            optionB, 
+            optionC, optionD, lvl,
             question, 
             CategoryId
          } = req.body
 
-         if(CategoryId !==3 && !anotherChoice1 || CategoryId !==3 && !anotherChoice2 || CategoryId !==3 && !anotherChoice3){
+         if(CategoryId !==3 && !optionA || CategoryId !==3 && !optionB || CategoryId !==3 && !optionC || CategoryId !==3 && !optionD){
 
-            throw {messege: "Choice required for Counting & Guess games"}
+            throw {name: "Choice required for Counting & Guess games"}
          }
 
          if(CategoryId !==3 && !imgUrl){
 
-            throw {messege: "Image Url required for Counting & Guess games"}
+            throw {name: "Image Url required for Counting & Guess games"}
          }
 
-         await Game.create({imgUrl, answer, anotherChoice1, anotherChoice2, anotherChoice3, lvl, question, CategoryId})
+         await Game.create({imgUrl, answer, optionA, optionB, optionC, optionD, lvl, question, CategoryId})
 
-         res.status(201).json({messege: 'Success create games'})
+         res.status(201).json({message: 'Success create games'})
 
       } catch (error) {
          next(error)
@@ -220,6 +220,8 @@ class ControllerAdmin {
          
          const {id} = req.params
 
+         console.log(id, "<<<<<<<<<<<<<<<<<<<<ini id <<<<<<<")
+
          const check = await Game.findOne({
             where: {
                id
@@ -227,7 +229,7 @@ class ControllerAdmin {
          })
 
          if(!check){
-            throw {messege: 'Game id not found'}
+            throw {name: 'Game id not found'}
          }
          
          await Game.destroy({
@@ -236,7 +238,7 @@ class ControllerAdmin {
             }
          })
 
-         res.status(200).json({messege: `Success delete game with id = ${id}`})
+         res.status(200).json({message: `Success delete game with id = ${id}`})
 
       } catch (error) {
          
@@ -262,12 +264,12 @@ class ControllerAdmin {
 
          if(CategoryId !==3 && !anotherChoice1 || CategoryId !==3 && !anotherChoice2 || CategoryId !==3 && !anotherChoice3){
 
-            throw {messege: "Choice required for Counting & Guess games"}
+            throw {name: "Choice required for Counting & Guess games"}
          }
 
          if(CategoryId !==3 && !imgUrl){
 
-            throw {messege: "Image Url required for Counting & Guess games"}
+            throw {name: "Image Url required for Counting & Guess games"}
          }
 
          const check = await Game.findOne({
@@ -277,7 +279,7 @@ class ControllerAdmin {
          })
 
          if(!check){
-            throw {messege: 'Game id not found'}
+            throw {name: 'Game id not found'}
          }
 
          await Game.update({imgUrl, answer, anotherChoice1, anotherChoice2, anotherChoice3, lvl, question, CategoryId}, {
@@ -286,7 +288,7 @@ class ControllerAdmin {
             }
          })
 
-         res.status(200).json({messege: `Success update game with id = ${id}`})
+         res.status(200).json({message: `Success update game with id = ${id}`})
 
       } catch (error) {
          next(error)
