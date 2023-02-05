@@ -1,7 +1,7 @@
 const request = require("supertest");
 const app = require("../app");
 const { signToken } = require("../helpers/jwt");
-const { User, sequelize } = require("../models");
+const { User, sequelize, Game } = require("../models");
 const fs = require('fs')
 
 let token
@@ -36,9 +36,15 @@ beforeAll(async () => {
       return x
     })
 
+    const newGamesGuessing = JSON.parse(fs.readFileSync('./_test_/data/guessing.json', 'utf-8')).map(x => {
+      x.createdAt = x.updatedAt = new Date()
+      return x
+    })
+
     await sequelize.queryInterface.bulkInsert('Categories', newCategories, {})
     await sequelize.queryInterface.bulkInsert('Games', newGamesCounting, {})
     await sequelize.queryInterface.bulkInsert('Games', newGamesLearning, {})
+    await sequelize.queryInterface.bulkInsert('Games', newGamesGuessing, {})
   } catch (error) {
     console.log(error);
   }
@@ -106,10 +112,40 @@ describe("GET /games", () => {
       });
   });
 
-  it("Shouldnot fetch games on id (cannot access)", () => {
+  it("Shouldnot fetch games on id (cannot access on counting because level is too low)", () => {
     return request(app)
       .get("/pub/games/play/2")
       .set("access_token", token)
+      .then((response) => {
+        expect(response.status).toBe(401);
+        expect(response.body).toHaveProperty("message", expect.any(String));
+      });
+  });
+
+  it("Shouldnot fetch games on id (cannot access on learning because level is too low)", () => {
+    return request(app)
+      .get("/pub/games/play/22")
+      .set("access_token", token)
+      .then((response) => {
+        expect(response.status).toBe(401);
+        expect(response.body).toHaveProperty("message", expect.any(String));
+      });
+  });
+
+  it("Shouldnot fetch games on id (cannot access on guessing because level is too low)", () => {
+    return request(app)
+      .get("/pub/games/play/32")
+      .set("access_token", token)
+      .then((response) => {
+        expect(response.status).toBe(401);
+        expect(response.body).toHaveProperty("message", expect.any(String));
+      });
+  });
+
+  it("Shouldnot fetch games on id (token is invalid)", () => {
+    return request(app)
+      .get("/pub/games/play/2")
+      .set("access_token", "laksjdadsjl")
       .then((response) => {
         expect(response.status).toBe(401);
         expect(response.body).toHaveProperty("message", expect.any(String));
