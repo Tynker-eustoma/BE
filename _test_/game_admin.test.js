@@ -285,5 +285,18 @@ describe("games", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
+
+    it("failed update games and response 401", () => {
+      return request(app)
+        .put("/users/games/2")
+        .set("access_token", token)
+        .send({
+          answer: "test", anotherChoice1: "test",  anotherChoice2: "test", anotherChoice3: "test", lvl: 2, question: "test",  CategoryId:1
+        })
+        .then((response) => {
+          expect(response.status).toBe(400);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
   })
 });

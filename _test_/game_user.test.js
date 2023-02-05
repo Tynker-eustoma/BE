@@ -5,6 +5,7 @@ const { User, sequelize, Game } = require("../models");
 const fs = require('fs')
 
 let token
+let token2
 beforeAll(async () => {
   try {
     await User.create({
@@ -20,6 +21,7 @@ beforeAll(async () => {
       updatedAt: new Date(),
     });
     token = signToken({ id: 1 })
+    token2 = signToken({ id: 2 })
 
     const newCategories = JSON.parse(fs.readFileSync('./_test_/data/category.json', 'utf-8')).map(x => {
       x.createdAt = x.updatedAt = new Date()
@@ -72,6 +74,16 @@ describe("GET /games", () => {
         expect(response.body[0]).toHaveProperty("id", expect.any(Number));
         expect(response.body[0]).toHaveProperty("lvl", expect.any(Number));
         expect(response.body[0]).toHaveProperty("question", expect.any(String));
+      });
+  });
+
+  it("Shouldnot fetch games all games based on category 1 (Cannot find user id 2)", () => {
+    return request(app)
+      .get("/pub/games/1")
+      .set("access_token", token2)
+      .then((response) => {
+        expect(response.status).toBe(401);
+        expect(response.body).toHaveProperty("message", expect.any(String));
       });
   });
 
@@ -180,6 +192,45 @@ describe("GET /games", () => {
       })
       .then((response) => {
         expect(response.status).toBe(200);
+        expect(response.body).toHaveProperty("message", expect.any(String));
+      });
+  });
+
+  it("Should answer games on id (right)", () => {
+    return request(app)
+      .put("/pub/games/update/2")
+      .set("access_token", token)
+      .send({
+        answer: "2",
+      })
+      .then((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body).toHaveProperty("message", expect.any(String));
+      });
+  });
+
+  it("Should answer games on id (right)", () => {
+    return request(app)
+      .put("/pub/games/update/3")
+      .set("access_token", token)
+      .send({
+        answer: "2",
+      })
+      .then((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body).toHaveProperty("message", expect.any(String));
+      });
+  });
+
+  it("Shouldnot update level", () => {
+    return request(app)
+      .put("/pub/games/update/22")
+      .set("access_token", token)
+      .send({
+        answer: "2",
+      })
+      .then((response) => {
+        expect(response.status).toBe(404);
         expect(response.body).toHaveProperty("message", expect.any(String));
       });
   });
