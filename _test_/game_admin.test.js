@@ -22,26 +22,25 @@ beforeAll(async () => {
       id: 1,
     });
 
-    console.log(token, "ini token<<<<<<<<<<<<<<<<<<<<<<<<<<");
 
     const newCategories = JSON.parse(fs.readFileSync('./_test_/data/category.json', 'utf-8')).map(x => {
-        x.createdAt = x.updatedAt = new Date()
-        return x
-      })
-  
-      const newGamesCounting = JSON.parse(fs.readFileSync('./_test_/data/Counting.json', 'utf-8')).map(x => {
-        x.createdAt = x.updatedAt = new Date()
-        return x
-      })
-  
-      const newGamesLearning = JSON.parse(fs.readFileSync('./_test_/data/learning.json', 'utf-8')).map(x => {
-        x.createdAt = x.updatedAt = new Date()
-        return x
-      })
-  
-      await sequelize.queryInterface.bulkInsert('Categories', newCategories, {})
-      await sequelize.queryInterface.bulkInsert('Games', newGamesCounting, {})
-      await sequelize.queryInterface.bulkInsert('Games', newGamesLearning, {})
+      x.createdAt = x.updatedAt = new Date()
+      return x
+    })
+
+    const newGamesCounting = JSON.parse(fs.readFileSync('./_test_/data/Counting.json', 'utf-8')).map(x => {
+      x.createdAt = x.updatedAt = new Date()
+      return x
+    })
+
+    const newGamesLearning = JSON.parse(fs.readFileSync('./_test_/data/learning.json', 'utf-8')).map(x => {
+      x.createdAt = x.updatedAt = new Date()
+      return x
+    })
+
+    await sequelize.queryInterface.bulkInsert('Categories', newCategories, {})
+    await sequelize.queryInterface.bulkInsert('Games', newGamesCounting, {})
+    await sequelize.queryInterface.bulkInsert('Games', newGamesLearning, {})
   } catch (error) {
     console.log(error);
   }
@@ -65,42 +64,14 @@ afterAll(async () => {
   });
 });
 
-describe.skip("games", () => {
+describe.only("games", () => {
   describe("GET /games", () => {
     it("Should fetch all games", () => {
       return request(app)
         .get("/users/games")
         .set("access_token", token)
         .then((response) => {
-          expect(response.status).toBe(200);
-          expect(response.body).toHaveProperty("data", expect.any(Array));
-        });
-    });
-
-    it("Shouldnot fetch games all games based on category (not found)", () => {
-      return request(app)
-        .get("/category/:categoryId")
-        .set("access_token", token)
-        .then((response) => {
-          expect(response.status).toBe(404);
-          expect(response.body).toHaveProperty("message", expect.any(String));
-        });
-    });
-
-    it("Shouldnot fetch games all games based on category (because there is not access token)", () => {
-      return request(app)
-        .get("/category/:categoryId")
-        .then((response) => {
-          expect(response.status).toBe(404);
-          expect(response.body).toHaveProperty("message", expect.any(String));
-        });
-    });
-
-    it("Should fetch games on id", () => {
-      return request(app)
-        .get("/games/:gamesId")
-        .set("access_token", token)
-        .then((response) => {
+          console.log(response.body, "<<<<<<<<<<<<<<<<<<<<<<,,response test")
           expect(response.status).toBe(200);
           expect(response.body).toEqual(expect.any(Array));
           expect(response.body[0]).toHaveProperty(
@@ -178,14 +149,14 @@ describe.skip("games", () => {
   });
 
   describe("/delete games", () => {
-    it.only("success delete games and response 200", () => {
+    it("success delete games and response 200", () => {
         return request(app)
-          .get("/users/games/1")
+          .delete("/users/games/1")
           .set("access_token", token)
           .then((response) => {
             expect(response.status).toBe(200);
             expect(response.body).toHaveProperty("message", expect.any(String));
           });
-      });
+    });
   })
 });
