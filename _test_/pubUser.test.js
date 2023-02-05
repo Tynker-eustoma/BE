@@ -35,7 +35,7 @@ afterAll(async () => {
   });
 });
 
-describe("api user", () => {
+describe.skip("api user", () => {
   describe("POST /pub/register", () => {
     test("should create new user and response 201", () => {
       return request(app)

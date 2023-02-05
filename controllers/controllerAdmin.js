@@ -165,14 +165,14 @@ class ControllerAdmin {
       try {
          
          const {imgUrl, 
-            answer, anotherChoice1, 
-            anotherChoice2, 
-            anotherChoice3, lvl,
+            answer, optionA, 
+            optionB, 
+            optionC, optionD, lvl,
             question, 
             CategoryId
          } = req.body
 
-         if(CategoryId !==3 && !anotherChoice1 || CategoryId !==3 && !anotherChoice2 || CategoryId !==3 && !anotherChoice3){
+         if(CategoryId !==3 && !optionA || CategoryId !==3 && !optionB || CategoryId !==3 && !optionC || CategoryId !==3 && !optionD){
 
             throw {name: "Choice required for Counting & Guess games"}
          }
@@ -182,7 +182,7 @@ class ControllerAdmin {
             throw {name: "Image Url required for Counting & Guess games"}
          }
 
-         await Game.create({imgUrl, answer, anotherChoice1, anotherChoice2, anotherChoice3, lvl, question, CategoryId})
+         await Game.create({imgUrl, answer, optionA, optionB, optionC, optionD, lvl, question, CategoryId})
 
          res.status(201).json({message: 'Success create games'})
 
@@ -219,6 +219,8 @@ class ControllerAdmin {
       try {
          
          const {id} = req.params
+
+         console.log(id, "<<<<<<<<<<<<<<<<<<<<ini id <<<<<<<")
 
          const check = await Game.findOne({
             where: {
