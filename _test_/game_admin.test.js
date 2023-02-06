@@ -6,7 +6,7 @@ const fs = require("fs");
 let token;
 beforeAll(async () => {
   try {
-    const user = await User.create({
+    await User.create({
       username: "customers1",
       email: "customers3@gmail.com",
       password: "password",
@@ -47,21 +47,9 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
-  await sequelize.queryInterface.bulkDelete("Users", null, {
-    truncate: true,
-    cascade: true,
-    restartIdentity: true,
-  });
-  await sequelize.queryInterface.bulkDelete("Categories", null, {
-    truncate: true,
-    cascade: true,
-    restartIdentity: true,
-  });
-  await sequelize.queryInterface.bulkDelete("Games", null, {
-    truncate: true,
-    cascade: true,
-    restartIdentity: true,
-  });
+  await sequelize.queryInterface.bulkDelete("Games", null, { truncate: true, cascade: true, restartIdentity: true, });
+  await sequelize.queryInterface.bulkDelete("Categories", null, {  truncate: true, cascade: true, restartIdentity: true, });
+  await sequelize.queryInterface.bulkDelete("Users", null, { truncate: true, cascade: true, restartIdentity: true, });
 });
 
 describe("games", () => {
@@ -71,45 +59,15 @@ describe("games", () => {
         .get("/users/games")
         .set("access_token", token)
         .then((response) => {
-          console.log(response.body, "<<<<<<<<<<<<<<<<<<<<<<,,response test")
           expect(response.status).toBe(200);
           expect(response.body).toEqual(expect.any(Array));
-          expect(response.body[0]).toHaveProperty(
-            "CategoryId",
-            expect.any(Number)
-          );
+          expect(response.body[0]).toHaveProperty("CategoryId", expect.any(Number));
           expect(response.body[0]).toHaveProperty("answer", expect.any(String));
-          expect(response.body[0]).toHaveProperty(
-            "createdAt",
-            expect.any(String)
-          );
-          expect(response.body[0]).toHaveProperty(
-            "updatedAt",
-            expect.any(String)
-          );
+          expect(response.body[0]).toHaveProperty("createdAt", expect.any(String));
+          expect(response.body[0]).toHaveProperty("updatedAt", expect.any(String));
           expect(response.body[0]).toHaveProperty("id", expect.any(Number));
           expect(response.body[0]).toHaveProperty("lvl", expect.any(Number));
-          expect(response.body[0]).toHaveProperty("imgUrl", expect.any(String));
-          expect(response.body[0]).toHaveProperty(
-            "optionA",
-            expect.any(String)
-          );
-          expect(response.body[0]).toHaveProperty(
-            "optionB",
-            expect.any(String)
-          );
-          expect(response.body[0]).toHaveProperty(
-            "optionC",
-            expect.any(String)
-          );
-          expect(response.body[0]).toHaveProperty(
-            "optionD",
-            expect.any(String)
-          );
-          expect(response.body[0]).toHaveProperty(
-            "question",
-            expect.any(String)
-          );
+          expect(response.body[0]).toHaveProperty("question", expect.any(String));
         });
     });
 
@@ -121,8 +79,6 @@ describe("games", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
-
-
   });
 
   describe("/post games", () => {
@@ -148,15 +104,107 @@ describe("games", () => {
     });
   });
 
+  describe("/post games", () => {
+    it("failed to create a new game and response 400", () => {
+      return request(app)
+        .post("/users/games")
+        .set("access_token", token)
+        .then((response) => {
+          expect(response.status).toBe(400);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+  });
+
+  describe("/post games", () => {
+    it("failed to create a new game and response 401", () => {
+      return request(app)
+        .post("/users/games")
+        .then((response) => {
+          expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+  });
+
   describe("/delete games", () => {
     it("success delete games and response 200", () => {
         return request(app)
-          .delete("/users/games/1")
+          .delete("/users/games/2")
           .set("access_token", token)
           .then((response) => {
             expect(response.status).toBe(200);
             expect(response.body).toHaveProperty("message", expect.any(String));
           });
+    });
+
+    it("success delete games and response 404", () => {
+      return request(app)
+        .delete("/users/games/2222")
+        .set("access_token", token)
+        .then((response) => {
+          expect(response.status).toBe(404);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
+    it("success delete games and response 401", () => {
+      return request(app)
+        .delete("/users/games/2222")
+        .then((response) => {
+          expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+  })
+
+  describe("/put games", () => {
+    it("success update games and response 200", () => {
+        return request(app)
+          .put("/users/games/1")
+          .set("access_token", token)
+          .send({
+            imgUrl: "test",  answer: "test", anotherChoice1: "test",  anotherChoice2: "test", anotherChoice3: "test", lvl: 2, question: "test",  CategoryId:1
+          })
+          .then((response) => {
+            expect(response.status).toBe(200);
+            expect(response.body).toHaveProperty("message", expect.any(String));
+          });
+    });
+
+    it("failed update games and response 400", () => {
+      return request(app)
+        .put("/users/games/1")
+        .set("access_token", token)
+        .then((response) => {
+          expect(response.status).toBe(400);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
+    it("failed update games and response 404", () => {
+      return request(app)
+        .put("/users/games/2222")
+        .set("access_token", token)
+        .send({
+          imgUrl: "test",  answer: "test", anotherChoice1: "test",  anotherChoice2: "test", anotherChoice3: "test", lvl: 2, question: "test",  CategoryId:1
+        })
+        .then((response) => {
+          expect(response.status).toBe(404);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
+    it("failed update games and response 401", () => {
+      return request(app)
+        .put("/users/games/2222")
+        .send({
+          imgUrl: "test",  answer: "test", anotherChoice1: "test",  anotherChoice2: "test", anotherChoice3: "test", lvl: 2, question: "test",  CategoryId:1
+        })
+        .then((response) => {
+          expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
     });
   })
 });

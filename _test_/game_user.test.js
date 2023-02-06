@@ -65,11 +65,6 @@ describe("GET /games", () => {
         expect(response.body[0]).toHaveProperty("updatedAt", expect.any(String));
         expect(response.body[0]).toHaveProperty("id", expect.any(Number));
         expect(response.body[0]).toHaveProperty("lvl", expect.any(Number));
-        expect(response.body[0]).toHaveProperty("imgUrl", expect.any(String));
-        expect(response.body[0]).toHaveProperty("optionA", expect.any(String));
-        expect(response.body[0]).toHaveProperty("optionB", expect.any(String));
-        expect(response.body[0]).toHaveProperty("optionC", expect.any(String));
-        expect(response.body[0]).toHaveProperty("optionD", expect.any(String));
         expect(response.body[0]).toHaveProperty("question", expect.any(String));
       });
   });

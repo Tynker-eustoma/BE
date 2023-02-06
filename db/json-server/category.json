@@ -1,0 +1,215 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Counting"
+    },
+    {
+      "id": 2,
+      "name": "Guessing"
+    },
+    {
+      "id": 3,
+      "name": "Learning"
+    }
+  ],
+  "counting": [
+    {
+      "id": 1,
+      "imgUrl": "https://i.imgur.com/9q8ZBR4.jpg",
+      "answer": "2",
+      "lvl": 1,
+      "question": "ada berapa macan dalam gambar tersebut? yuk coba hitung!",
+      "CategoryId": 1,
+      "optionA": "3",
+      "optionB": "1",
+      "optionC": "2",
+      "optionD": "4"
+    },
+    {
+      "id": 2,
+      "imgUrl": "https://i.imgur.com/sEIxa5X.jpg",
+      "answer": "7",
+      "lvl": 2,
+      "question": "ada berapa kambing dalam gambar tersebut? yuk coba hitung!",
+      "CategoryId": 1,
+      "optionA": "6",
+      "optionB": "7",
+      "optionC": "5",
+      "optionD": "8"
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://i.imgur.com/152hco9.jpg",
+      "answer": "5",
+      "lvl": 3,
+      "question": "ada berapa sapi dalam gambar tersebut? yuk coba hitung!",
+      "CategoryId": 1,
+      "optionA": "5",
+      "optionB": "4",
+      "optionC": "6",
+      "optionD": "3"
+    },
+    {
+      "id": 4,
+      "imgUrl": "https://i.imgur.com/5XfGOeQ.jpg",
+      "answer": "3",
+      "lvl": 4,
+      "question": "ada berapa kukang dalam gambar tersebut? yuk coba hitung!",
+      "CategoryId": 1,
+      "optionA": "4",
+      "optionB": "3",
+      "optionC": "2",
+      "optionD": "5"
+    },
+    {
+      "id": 5,
+      "imgUrl": "https://i.imgur.com/uV4XwKy.jpg",
+      "answer": "2",
+      "lvl": 5,
+      "question": "ada berapa jerapah dalam gambar tersebut? yuk coba hitung!",
+      "CategoryId": 1,
+      "optionA": "4",
+      "optionB": "3",
+      "optionC": "2",
+      "optionD": "5"
+    },
+    {
+      "id": 6,
+      "imgUrl": "https://i.imgur.com/A2su4Q6.png",
+      "answer": "7",
+      "lvl": 6,
+      "question": "ada berapa burung dalam gambar tersebut? yuk coba hitung!",
+      "CategoryId": 1,
+      "optionA": "7",
+      "optionB": "6",
+      "optionC": "8",
+      "optionD": "5"
+    },
+    {
+      "id": 8,
+      "imgUrl": "https://i.imgur.com/Gd9JmeS.png",
+      "answer": "6",
+      "lvl": 8,
+      "question": "ada berapa monyet dalam gambar tersebut? yuk coba hitung!",
+      "CategoryId": 1,
+      "optionA": "7",
+      "optionB": "5",
+      "optionC": "8",
+      "optionD": "6"
+    },
+    {
+      "id": 9,
+      "imgUrl": "https://i.imgur.com/s01niJt.png",
+      "answer": "8",
+      "lvl": 9,
+      "question": "ada berapa domba dalam gambar tersebut? yuk coba hitung!",
+      "CategoryId": 1,
+      "optionA": "7",
+      "optionB": "8",
+      "optionC": "9",
+      "optionD": "6"
+    },
+    {
+      "id": 10,
+      "imgUrl": "https://i.imgur.com/vQG1fFE.png",
+      "answer": "5",
+      "lvl": 10,
+      "question": "ada berapa jumlah kukang dan burung dalam gambar tersebut? yuk coba hitung!",
+      "CategoryId": 1,
+      "optionA": "5",
+      "optionB": "8",
+      "optionC": "9",
+      "optionD": "6"
+    },
+    {
+      "id": 11,
+      "imgUrl": "https://i.imgur.com/vQG1fFE.png",
+      "answer": "5",
+      "lvl": 11,
+      "question": "ada berapa jumlah kukang dan burung dalam gambar tersebut? yuk coba hitung!",
+      "CategoryId": 1,
+      "optionA": "5",
+      "optionB": "8",
+      "optionC": "9",
+      "optionD": "6"
+    }
+  ],
+  "learning": [
+    {
+      "answer": "one",
+      "lvl": 1,
+      "question": "sebutkan bahasa inggris dari angka satu"
+    },
+    {
+      "answer": "two",
+      "lvl": 2,
+      "question": "sebutkan bahasa inggris dari angka dua"
+    },
+    {
+      "answer": "three",
+      "lvl": 3,
+      "question": "sebutkan bahasa inggris dari angka tiga"
+    },
+    {
+      "answer": "four",
+      "lvl": 4,
+      "question": "sebutkan bahasa inggris dari angka empat"
+    },
+    {
+      "answer": "five",
+      "lvl": 5,
+      "question": "sebutkan bahasa inggris dari angka lima"
+    },
+    {
+      "answer": "six",
+      "lvl": 6,
+      "question": "sebutkan bahasa inggris dari angka enam"
+    },
+    {
+      "answer": "seven",
+      "lvl": 7,
+      "question": "sebutkan bahasa inggris dari angka tujuh"
+    },
+    {
+      "answer": "eight",
+      "lvl": 8,
+      "question": "sebutkan bahasa inggris dari angka delapan"
+    },
+    {
+      "answer": "nine",
+      "lvl": 9,
+      "question": "sebutkan bahasa inggris dari angka sembilan"
+    },
+    {
+      "answer": "ten",
+      "lvl": 10,
+      "question": "sebutkan bahasa inggris dari angka sepuluh"
+    },
+    {
+      "answer": "white",
+      "lvl": 11,
+      "question": "sebutkan bahasa inggris dari warna putih"
+    },
+    {
+      "answer": "black",
+      "lvl": 12,
+      "question": "sebutkan bahasa inggris dari angka hitam"
+    },
+    {
+      "answer": "blue",
+      "lvl": 13,
+      "question": "sebutkan bahasa inggris dari angka biru"
+    },
+    {
+      "answer": "red",
+      "lvl": 14,
+      "question": "sebutkan bahasa inggris dari angka merah"
+    },
+    {
+      "answer": "green",
+      "lvl": 15,
+      "question": "sebutkan bahasa inggris dari angka hijau"
+    }
+  ]
+}
