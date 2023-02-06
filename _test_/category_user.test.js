@@ -57,5 +57,15 @@ describe("Category", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
+
+    it("Shouldnot fetch category and fail response (Access token is not found)", () => {
+      return request(app)
+        .get("/pub/category")
+        .set('access_token', "akjsdajksdh")
+        .then((response) => {
+          expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
   });
 });

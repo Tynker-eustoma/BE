@@ -57,6 +57,16 @@ describe("Category", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
+
+    it("Shouldnot fetch category and fail response (Access token is not found)", () => {
+      return request(app)
+        .get("/users/categories")
+        .set('access_token', "asdasdas")
+        .then((response) => {
+          expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
   });
 
   describe("/post categories", () => {
@@ -72,9 +82,17 @@ describe("Category", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
-  })
 
-  describe("/post categories", () => {
+    it("failed create a new categories", () => {
+      return request(app)
+        .post("/users/categories")
+        .set("access_token", token)
+        .then((response) => {
+          expect(response.status).toBe(400);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
     it("failed create a new categories and response 401", () => {
       return request(app)
         .post("/users/categories")
@@ -83,6 +101,29 @@ describe("Category", () => {
         })
         .then((response) => {
           expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
+    it("failed create a new categories and response 401", () => {
+      return request(app)
+        .post("/users/categories")
+        .set("access_token", "token")
+        .send({
+          name: "drawing",
+        })
+        .then((response) => {
+          expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
+    it("failed create a new categories and response 400", () => {
+      return request(app)
+        .post("/users/categories")
+        .set("access_token", token)
+        .then((response) => {
+          expect(response.status).toBe(400);
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
@@ -98,9 +139,7 @@ describe("Category", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
-  })
 
-  describe("/delete categories", () => {
     it("failed delete games and response 404", () => {
       return request(app)
         .delete("/users/categories/22")
@@ -110,12 +149,20 @@ describe("Category", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
-  })
 
-  describe("/delete categories", () => {
     it("failed delete games and response 401", () => {
       return request(app)
         .delete("/users/categories/3")
+        .then((response) => {
+          expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
+    it("failed delete games and response 401", () => {
+      return request(app)
+        .delete("/users/categories/3")
+        .set("access_token", "token")
         .then((response) => {
           expect(response.status).toBe(401);
           expect(response.body).toHaveProperty("message", expect.any(String));
@@ -136,9 +183,17 @@ describe("Category", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
-  })
 
-  describe("/put categories", () => {
+    it("failed update games and response 400", () => {
+      return request(app)
+        .put("/users/categories/2")
+        .set("access_token", token)
+        .then((response) => {
+          expect(response.status).toBe(400);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
     it("failed update games and response 404", () => {
       return request(app)
         .put("/users/categories/22")
@@ -151,12 +206,23 @@ describe("Category", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
-  })
 
-  describe("/put categories", () => {
     it("failed update games and response 401", () => {
       return request(app)
         .put("/users/categories/22")
+        .send({
+          name: 'Gaming'
+        })
+        .then((response) => {
+          expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
+    it("failed update games and response 401", () => {
+      return request(app)
+        .put("/users/categories/22")
+        .set("access_token", "token")
         .send({
           name: 'Gaming'
         })

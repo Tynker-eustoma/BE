@@ -18,7 +18,7 @@ const errorHandler = (err, req, res, next) => {
   } else if (err.name === "Choice required for Counting & Guess games"){
      code = 400
      message = err.name
-  } else if (err.name === "Image Url required for Counting & Guess games"){
+  } else if (err.name === "Image Url required for Counting & Guess games" || err.name === "Category name is required for update"){
      code = 400
      message = err.name
   } else if (err.name === 'Game id not found'){
