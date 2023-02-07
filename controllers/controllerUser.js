@@ -27,6 +27,19 @@ class ControllerUser {
    }
 }
 
+   static async findUser(req, res, next){
+      try {
+         const {id} =  req.user
+
+         const user = await User.findByPk(id, {attributes: {exclude: ['password']}})
+
+         res.status(200).json(user)
+
+      } catch (error) {
+         next(error)
+      }
+   }
+
    static async login(req, res, next) {
       try {
       const { email, password } = req.body;
@@ -52,7 +65,6 @@ class ControllerUser {
       };
 
       const access_token = signToken(payload);
-
       res.status(200).json({ access_token });
 
       } catch(error){
@@ -110,9 +122,11 @@ class ControllerUser {
          const {id} = req.params
          const {lvlCount, lvlGuess, lvlLearn} = req.user
 
+         
          const data = await Game.findOne({
             where: {id}
          })
+         console.log(data, ">>>>>>>>>>><<<<<<<<<<<", lvlCount, lvlGuess, lvlLearn )
 
          if (!data){
             throw {name: "Game id not found"}
