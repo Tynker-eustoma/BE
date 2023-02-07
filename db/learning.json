@@ -1,17 +1,19 @@
 [
   {
-    "answer": "two",
+    "answer": "two two",
     "imgUrl": "https://media.tenor.com/UBh_oWQehPkAAAAi/rowing-rowingat.gif",
     "lvl": 1,
     "question": "sebutkan bahasa inggris dari angka dua",
-    "CategoryId": 3
+    "CategoryId": 3, 
+    "optionA": "2 2"
   },
   {
-    "answer": "five",
+    "answer": "five five ",
     "imgUrl": "https://media.tenor.com/vGUn9cej74MAAAAi/kstr-kochstrasse.gif",
     "lvl": 2,
     "question": "sebutkan bahasa inggris dari angka lima",
-    "CategoryId": 3
+    "CategoryId": 3,
+    "optionA": "5 5"
   },
   {
     "answer": "seven",
