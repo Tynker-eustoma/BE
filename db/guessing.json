@@ -1,5 +1,6 @@
 [{
     "answer": "https://media.tenor.com/5ICH-R2dk78AAAAi/wolf-howling.gif",
+    "imgUrl": "https://media.tenor.com/5ICH-R2dk78AAAAi/wolf-howling.gif",
     "lvl": 1,
     "question": "Serigala",
     "CategoryId": 2,
@@ -9,6 +10,7 @@
     "optionD": "https://media.tenor.com/VISiRM_3gLoAAAAi/%E8%9E%B3%E8%9E%82-praying-mantis.gif"
   }, {
     "answer": "https://media.tenor.com/ZwIIFgr4lWoAAAAi/lion-king.gif",
+    "imgUrl": "https://media.tenor.com/ZwIIFgr4lWoAAAAi/lion-king.gif",
     "lvl": 2,
     "question": "Singa",
     "CategoryId": 2,
@@ -18,6 +20,7 @@
     "optionD": "https://media.tenor.com/ZwIIFgr4lWoAAAAi/lion-king.gif"
   }, {
     "answer": "https://media.tenor.com/7tcTj70SfHAAAAAi/sheep-head-tilt.gif",
+    "imgUrl": "https://media.tenor.com/7tcTj70SfHAAAAAi/sheep-head-tilt.gif",
     "lvl": 3,
     "question": "Domba",
     "CategoryId": 2,
@@ -27,6 +30,7 @@
     "optionD": "https://media.tenor.com/tKPieyYE4NkAAAAi/raccoon-crab-eating-raccoon.gif"
   },{
     "answer": "https://media.tenor.com/W5qtl0HYoLYAAAAi/catscafe-penguin.gif",
+    "imgUrl": "https://media.tenor.com/W5qtl0HYoLYAAAAi/catscafe-penguin.gif",
     "lvl": 4,
     "question": "Pinguin",
     "CategoryId": 2,
@@ -36,6 +40,7 @@
     "optionD": "https://media.tenor.com/sPcP-WxbX9gAAAAi/bear-american-black-bear.gif"
   }, {
     "answer": "https://media.tenor.com/kttV6V_t16QAAAAi/horse-joypixels.gif2",
+    "imgUrl": "https://media.tenor.com/kttV6V_t16QAAAAi/horse-joypixels.gif2",
     "lvl": 5,
     "question": "Kuda",
     "CategoryId": 2,
@@ -45,6 +50,7 @@
     "optionD": "https://media.tenor.com/kttV6V_t16QAAAAi/horse-joypixels.gif"
   }, {
     "answer": "https://media.tenor.com/7SGlANK3kFEAAAAi/dm4uz3-foekoe.gif",
+    "imgUrl": "https://media.tenor.com/7SGlANK3kFEAAAAi/dm4uz3-foekoe.gif",
     "lvl": 6,
     "question": "Ikan",
     "CategoryId": 2,
@@ -54,6 +60,7 @@
     "optionD": "https://media.tenor.com/lXC19WEAr8IAAAAi/sea-lion-californian-sea-lion.gif"
   }, {
     "answer": "https://media.tenor.com/pQZ0uVs1uv8AAAAi/butterfly-yellow.gif",
+    "imgUrl": "https://media.tenor.com/pQZ0uVs1uv8AAAAi/butterfly-yellow.gif",
     "lvl": 7,
     "question": "Kupu-kupu",
     "CategoryId": 2,
@@ -62,8 +69,8 @@
     "optionC": "https://media.tenor.com/Zyp45ssWB0kAAAAi/rhinoceros-javan-rhinoceros.gif",
     "optionD": "https://media.tenor.com/pQZ0uVs1uv8AAAAi/butterfly-yellow.gif"
   }, {
-    "imgUrl": "https://i.imgur.com/Gd9JmeS.png",
     "answer": "https://media.tenor.com/keaxDIpKwxcAAAAi/jorrparivar-digital-pratik.gif",
+    "imgUrl": "https://media.tenor.com/keaxDIpKwxcAAAAi/jorrparivar-digital-pratik.gif",
     "lvl": 8,
     "question": "Ular",
     "CategoryId": 2,
@@ -73,6 +80,7 @@
     "optionD": "https://media.tenor.com/BO2F75g_YuIAAAAi/giraffe-stars.gif"
   }, {
     "answer": "https://media.tenor.com/mRHmpBbk4E0AAAAi/pigeon-dove.gif",
+    "imgUrl": "https://media.tenor.com/mRHmpBbk4E0AAAAi/pigeon-dove.gif",
     "lvl": 9,
     "question": "Merpati",
     "CategoryId": 2,
@@ -82,6 +90,7 @@
     "optionD": "https://media.tenor.com/Zyp45ssWB0kAAAAi/rhinoceros-javan-rhinoceros.gif"
   },{
     "answer": "https://media.tenor.com/SwqQl1FnAGgAAAAi/owl-blinking.gif",
+    "imgUrl": "https://media.tenor.com/SwqQl1FnAGgAAAAi/owl-blinking.gif",
     "lvl": 10,
     "question": "Burung Hantu",
     "CategoryId": 2,
@@ -91,6 +100,7 @@
     "optionD": "https://media.tenor.com/SwqQl1FnAGgAAAAi/owl-blinking.gif"
   }, {
     "answer": "https://media.tenor.com/5__8peoJcFoAAAAi/worm-dream-cream.gif",
+    "imgUrl": "https://media.tenor.com/5__8peoJcFoAAAAi/worm-dream-cream.gif",
     "lvl": 11,
     "question": "Ulat",
     "CategoryId": 2,
@@ -100,17 +110,18 @@
     "optionD": "https://media.tenor.com/5__8peoJcFoAAAAi/worm-dream-cream.gif"
   },
   {
-    "imgUrl": "https://i.imgur.com/9q8ZBR4.jpg",
-    "answer": "2",
+    "answer": "https://media.tenor.com/GDDLB40MtMcAAAAi/squirrel-acorn.gif",
+    "imgUrl": "https://media.tenor.com/GDDLB40MtMcAAAAi/squirrel-acorn.gif",
     "lvl": 12,
-    "question": "ada berapa macan dalam gambar tersebut? yuk coba hitung!",
+    "question": "Tupai",
     "CategoryId": 2,
-    "optionA": "3",
-    "optionB": "1",
-    "optionC": "2",
-    "optionD": "4"
+    "optionA": "https://media.tenor.com/j4STBrTfPWUAAAAi/chicken-hen.gif",
+    "optionB": "https://media.tenor.com/sPcP-WxbX9gAAAAi/bear-american-black-bear.gif",
+    "optionC": "https://media.tenor.com/GDDLB40MtMcAAAAi/squirrel-acorn.gif",
+    "optionD": "https://media.tenor.com/AdXl1uIhQfMAAAAi/turtle-carlbot.gif"
   }, {
     "answer": "https://media.tenor.com/AdXl1uIhQfMAAAAi/turtle-carlbot.gif",
+    "imgUrl": "https://media.tenor.com/AdXl1uIhQfMAAAAi/turtle-carlbot.gif",
     "lvl": 13,
     "question": "Kura-kura",
     "CategoryId": 2,
@@ -120,6 +131,7 @@
     "optionD": "https://media.tenor.com/7SGlANK3kFEAAAAi/dm4uz3-foekoe.gif"
   }, {
     "answer": "https://media.tenor.com/9wiJGOH0AjYAAAAi/rats-rat.gif",
+    "imgUrl": "https://media.tenor.com/9wiJGOH0AjYAAAAi/rats-rat.gif",
     "lvl": 14,
     "question": "Tikus",
     "CategoryId": 2,
@@ -129,6 +141,7 @@
     "optionD": "https://media.tenor.com/kttV6V_t16QAAAAi/horse-joypixels.gif"
   },{
     "answer": "https://media.tenor.com/x7VrAOcZtFoAAAAi/eagle-flap.gif",
+    "imgUrl": "https://media.tenor.com/x7VrAOcZtFoAAAAi/eagle-flap.gif",
     "lvl": 15,
     "question": "Elang",
     "CategoryId": 2,
@@ -138,6 +151,7 @@
     "optionD": "https://media.tenor.com/AdXl1uIhQfMAAAAi/turtle-carlbot.gif"
   }, {
     "answer": "https://media.tenor.com/4RBqxp0EVbgAAAAi/camel-dromedary.gif",
+    "imgUrl": "https://media.tenor.com/4RBqxp0EVbgAAAAi/camel-dromedary.gif",
     "lvl":16,
     "question": "Unta",
     "CategoryId": 2,
@@ -147,6 +161,7 @@
     "optionD": "https://media.tenor.com/GDDLB40MtMcAAAAi/squirrel-acorn.gif"
   }, {
     "answer": "https://media.tenor.com/NyIz2vSJHBkAAAAi/bat-flying.gif",
+    "imgUrl": "https://media.tenor.com/NyIz2vSJHBkAAAAi/bat-flying.gif",
     "lvl": 17,
     "question": "Kelelawar",
     "CategoryId": 2,
@@ -156,6 +171,7 @@
     "optionD": "https://media.tenor.com/9uRejMMYygEAAAAi/kangaroo-joypixels.gif"
   }, {
     "answer": "https://media.tenor.com/BO2F75g_YuIAAAAi/giraffe-stars.gif",
+    "imgUrl": "https://media.tenor.com/BO2F75g_YuIAAAAi/giraffe-stars.gif",
     "lvl": 18,
     "question": "Jerapah",
     "CategoryId": 2,
@@ -165,6 +181,7 @@
     "optionD": "https://media.tenor.com/BO2F75g_YuIAAAAi/giraffe-stars.gif"
   }, {
     "answer": "https://media.tenor.com/wScgzw2bMFsAAAAi/tiger.gif",
+    "imgUrl": "https://media.tenor.com/wScgzw2bMFsAAAAi/tiger.gif",
     "lvl": 19,
     "question": "Leopard",
     "CategoryId": 2,
@@ -174,6 +191,7 @@
     "optionD": "https://media.tenor.com/ffjpRgKzEHYAAAAi/cow-run.gif"
   },{
     "answer": "https://media.tenor.com/Zyp45ssWB0kAAAAi/rhinoceros-javan-rhinoceros.gif",
+    "imgUrl": "https://media.tenor.com/Zyp45ssWB0kAAAAi/rhinoceros-javan-rhinoceros.gif",
     "lvl": 20,
     "question": "Badak",
     "CategoryId": 2,
@@ -183,6 +201,7 @@
     "optionD": "https://media.tenor.com/GDDLB40MtMcAAAAi/squirrel-acorn.gif"
   }, {
     "answer": "https://media.tenor.com/VISiRM_3gLoAAAAi/%E8%9E%B3%E8%9E%82-praying-mantis.gif",
+    "imgUrl": "https://media.tenor.com/VISiRM_3gLoAAAAi/%E8%9E%B3%E8%9E%82-praying-mantis.gif",
     "lvl": 21,
     "question": "Mantis",
     "CategoryId": 2,
@@ -192,8 +211,9 @@
     "optionD": "https://media.tenor.com/W5qtl0HYoLYAAAAi/catscafe-penguin.gif"
   }, {
     "answer": "https://media.tenor.com/tKPieyYE4NkAAAAi/raccoon-crab-eating-raccoon.gif",
+    "imgUrl": "https://media.tenor.com/tKPieyYE4NkAAAAi/raccoon-crab-eating-raccoon.gif",
     "lvl": 22,
-    "question": "Rakun",
+    "question": "Kukang",
     "CategoryId": 2,
     "optionA": "https://media.tenor.com/j4STBrTfPWUAAAAi/chicken-hen.gif",
     "optionB": "https://media.tenor.com/tKPieyYE4NkAAAAi/raccoon-crab-eating-raccoon.gif",
@@ -201,6 +221,7 @@
     "optionD": "https://media.tenor.com/x7VrAOcZtFoAAAAi/eagle-flap.gif"
   }, {
     "answer": "https://media.tenor.com/ffjpRgKzEHYAAAAi/cow-run.gif",
+    "imgUrl": "https://media.tenor.com/ffjpRgKzEHYAAAAi/cow-run.gif",
     "lvl": 23,
     "question": "Sapi",
     "CategoryId": 2,
@@ -210,6 +231,7 @@
     "optionD": "https://media.tenor.com/AdXl1uIhQfMAAAAi/turtle-carlbot.gif"
   },{
     "answer": "https://media.tenor.com/lXC19WEAr8IAAAAi/sea-lion-californian-sea-lion.gif",
+    "imgUrl": "https://media.tenor.com/lXC19WEAr8IAAAAi/sea-lion-californian-sea-lion.gif",
     "lvl": 24,
     "question": "Singa laut",
     "CategoryId": 2,
@@ -219,6 +241,7 @@
     "optionD": "https://media.tenor.com/1yyaAl88s1UAAAAi/abiera-star.gif"
   }, {
     "answer": "https://media.tenor.com/9uRejMMYygEAAAAi/kangaroo-joypixels.gif",
+    "imgUrl": "https://media.tenor.com/9uRejMMYygEAAAAi/kangaroo-joypixels.gif",
     "lvl": 25,
     "question": "Kanguru",
     "CategoryId": 2,
@@ -228,6 +251,7 @@
     "optionD": "https://media.tenor.com/AdXl1uIhQfMAAAAi/turtle-carlbot.gif"
   }, {
     "answer": "https://media.tenor.com/sPcP-WxbX9gAAAAi/bear-american-black-bear.gif",
+    "imgUrl": "https://media.tenor.com/sPcP-WxbX9gAAAAi/bear-american-black-bear.gif",
     "lvl": 26,
     "question": "Beruang",
     "CategoryId": 2,
@@ -237,6 +261,7 @@
     "optionD": "https://media.tenor.com/kttV6V_t16QAAAAi/horse-joypixels.gif"
   }, {
     "answer": "https://media.tenor.com/j4STBrTfPWUAAAAi/chicken-hen.gif",
+    "imgUrl": "https://media.tenor.com/j4STBrTfPWUAAAAi/chicken-hen.gif",
     "lvl": 27,
     "question": "Ayam",
     "CategoryId": 2,
@@ -246,6 +271,7 @@
     "optionD": "https://media.tenor.com/SwqQl1FnAGgAAAAi/owl-blinking.gif"
   }, {
     "answer": "https://media.tenor.com/1yyaAl88s1UAAAAi/abiera-star.gif",
+    "imgUrl": "https://media.tenor.com/1yyaAl88s1UAAAAi/abiera-star.gif",
     "lvl": 28,
     "question": "Bintang laut",
     "CategoryId": 2,
@@ -255,6 +281,7 @@
     "optionD": "https://media.tenor.com/1yyaAl88s1UAAAAi/abiera-star.gif"
   }, {
     "answer": "https://media.tenor.com/jVwKTebhrcMAAAAi/rak-zwierze.gif",
+    "imgUrl": "https://media.tenor.com/jVwKTebhrcMAAAAi/rak-zwierze.gif",
     "lvl": 29,
     "question": "Lobster",
     "CategoryId": 2,
@@ -263,12 +290,13 @@
     "optionC": "https://media.tenor.com/jVwKTebhrcMAAAAi/rak-zwierze.gif",
     "optionD": "https://media.tenor.com/AdXl1uIhQfMAAAAi/turtle-carlbot.gif"
   },{
-    "answer": "https://media.tenor.com/GDDLB40MtMcAAAAi/squirrel-acorn.gif",
+    "answer": "https://media.tenor.com/JqHpW37XDcsAAAAi/crab-crab-rave.gif",
+    "imgUrl": "https://media.tenor.com/JqHpW37XDcsAAAAi/crab-crab-rave.gif",
     "lvl": 30,
-    "question": "ada berapa jumlah kukang dan burung dalam gambar tersebut? yuk coba hitung!",
+    "question": "Kepiting",
     "CategoryId": 2,
     "optionA": "https://media.tenor.com/5ICH-R2dk78AAAAi/wolf-howling.gif",
-    "optionB": "https://media.tenor.com/GDDLB40MtMcAAAAi/squirrel-acorn.gif",
+    "optionB": "https://media.tenor.com/JqHpW37XDcsAAAAi/crab-crab-rave.gif",
     "optionC": "https://media.tenor.com/ffjpRgKzEHYAAAAi/cow-run.gif",
     "optionD": "https://media.tenor.com/9uRejMMYygEAAAAi/kangaroo-joypixels.gif"
   }

@@ -12,6 +12,9 @@ const errorHandler = (err, req, res, next) => {
   } else if (err.name === 'Invalid Email/Password') {
      code=401
      message = err.name
+  } else if (err.name === 'User id not found') {
+     code = 404
+     message = err.name
   } else if (err.name === 'Category id not found') {
      code = 404
      message = err.name

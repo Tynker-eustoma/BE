@@ -27,6 +27,24 @@ class ControllerUser {
    }
 }
 
+   static async findUser(req, res, next){
+      try {
+         const {id} =  req.user
+
+         const user = await User.findByPk(id, {attributes: {exclude: ['password']}})
+
+
+         if (!user){
+            throw {name: "User id not found"}
+         }
+
+         res.status(200).json(user)
+
+      } catch (error) {
+         next(error)
+      }
+   }
+
    static async login(req, res, next) {
       try {
       const { email, password } = req.body;
@@ -52,7 +70,6 @@ class ControllerUser {
       };
 
       const access_token = signToken(payload);
-
       res.status(200).json({ access_token });
 
       } catch(error){
