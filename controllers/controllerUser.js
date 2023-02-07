@@ -33,11 +33,6 @@ class ControllerUser {
 
          const user = await User.findByPk(id, {attributes: {exclude: ['password']}})
 
-
-         if (!user){
-            throw {name: "User id not found"}
-         }
-
          res.status(200).json(user)
 
       } catch (error) {
@@ -127,9 +122,11 @@ class ControllerUser {
          const {id} = req.params
          const {lvlCount, lvlGuess, lvlLearn} = req.user
 
+         
          const data = await Game.findOne({
             where: {id}
          })
+         console.log(data, ">>>>>>>>>>><<<<<<<<<<<", lvlCount, lvlGuess, lvlLearn )
 
          if (!data){
             throw {name: "Game id not found"}
