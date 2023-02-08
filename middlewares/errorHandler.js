@@ -27,7 +27,7 @@ const errorHandler = (err, req, res, next) => {
   } else if (err.name === 'Your level is low to access this page'){
      code = 401
      message = err.name
-  }
+  } else if(err.name)
   console.log(err)
   console.log(code, message, "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
   res.status(code).json({message})

@@ -20,6 +20,10 @@ const authenticationAdmin = async (req, res, next) => {
          throw {name: 'Invalid token'}
       }
 
+      if(findUser.role !== "admin"){
+         throw {name: "only admin can access this page"}
+      }
+
 
       req.user = {
          id: findUser.id,
