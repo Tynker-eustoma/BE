@@ -1,7 +1,7 @@
 const { hashPassword, compareHash } = require('../helpers/bcrypt')
 const { signToken } = require('../helpers/jwt')
 const {User, Category, Game} = require('../models')
-
+const redis = require('../config/redis');
 class ControllerAdmin {
    
    static async register(req, res, next){
@@ -135,6 +135,10 @@ class ControllerAdmin {
          const {id} = req.params
          const {name} = req.body
 
+         if (!name){
+            throw {name: "Category name is required for update"}
+         }
+
          const check = await Category.findOne({
             where: {
                id
@@ -172,6 +176,7 @@ class ControllerAdmin {
             CategoryId
          } = req.body
 
+
          if(CategoryId !==3 && !optionA || CategoryId !==3 && !optionB || CategoryId !==3 && !optionC || CategoryId !==3 && !optionD){
 
             throw {name: "Choice required for Counting & Guess games"}
@@ -182,8 +187,8 @@ class ControllerAdmin {
             throw {name: "Image Url required for Counting & Guess games"}
          }
 
-         await Game.create({imgUrl, answer, optionA, optionB, optionC, optionD, lvl, question, CategoryId})
-
+         await Game.create({imgUrl, answer, optionA, optionB, optionC, optionD, lvl: Number(lvl), question, CategoryId: Number(CategoryId)})
+         await redis.del(`tynker:categories${CategoryId}`)
          res.status(201).json({message: 'Success create games'})
 
       } catch (error) {
@@ -199,7 +204,7 @@ class ControllerAdmin {
       try {
          
          const data = await Game.findAll({
-            order:[['createdAt', 'DESC']],
+            order:[['lvl', 'ASC']] ,
             include: {
                model: Category
             }
@@ -237,7 +242,9 @@ class ControllerAdmin {
                id
             }
          })
-
+         await redis.del(`tynker:categories1`)
+         await redis.del(`tynker:categories2`)
+         await redis.del(`tynker:categories3`)
          res.status(200).json({message: `Success delete game with id = ${id}`})
 
       } catch (error) {

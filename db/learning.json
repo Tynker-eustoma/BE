@@ -1,76 +1,214 @@
-[{
-    "id": 1,
-    "answer": "one",
+[
+  {
+    "answer": "two two",
+    "imgUrl": "https://media.tenor.com/UBh_oWQehPkAAAAi/rowing-rowingat.gif",
     "lvl": 1,
-    "question": "sebutkan bahasa inggris dari angka satu"
-}, {
-  "id": 2,
-  "answer": "two",
-  "lvl": 2,
-  "question": "sebutkan bahasa inggris dari angka dua"
-}, {
-  "id": 3,
-  "answer": "three",
-  "lvl": 3,
-  "question": "sebutkan bahasa inggris dari angka tiga"
-}, {
-  "id": 4,
-  "answer": "four",
-  "lvl": 4,
-  "question": "sebutkan bahasa inggris dari angka empat"
-}, {
-  "id": 5,
-  "answer": "five",
-  "lvl": 5,
-  "question": "sebutkan bahasa inggris dari angka lima"
-}, {
-  "id": 6,
-  "answer": "six",
-  "lvl": 6,
-  "question": "sebutkan bahasa inggris dari angka enam"
-}, {
-  "id": 7,
-  "answer": "seven",
-  "lvl": 7,
-  "question": "sebutkan bahasa inggris dari angka tujuh"
-}, {
-  "id": 8,
-  "answer": "eight",
-  "lvl": 8,
-  "question": "sebutkan bahasa inggris dari angka delapan"
-}, {
-  "id": 9,
-  "answer": "nine",
-  "lvl": 9,
-  "question": "sebutkan bahasa inggris dari angka sembilan"
-}, {
-  "id": 10,
-  "answer": "ten",
-  "lvl": 10,
-  "question": "sebutkan bahasa inggris dari angka sepuluh"
-}, {
-  "id": 11,
-  "answer": "white",
-  "lvl": 11,
-  "question": "sebutkan bahasa inggris dari warna putih"
-}, {
-  "id": 12,
-  "answer": "black",
-  "lvl": 12,
-  "question": "sebutkan bahasa inggris dari angka hitam"
-}, {
-  "id": 13,
-  "answer": "blue",
-  "lvl": 13,
-  "question": "sebutkan bahasa inggris dari angka biru"
-}, {
-  "id": 14,
-  "answer": "red",
-  "lvl": 14,
-  "question": "sebutkan bahasa inggris dari angka merah"
-},{
-  "id": 15,
-  "answer": "green",
-  "lvl": 15,
-  "question": "sebutkan bahasa inggris dari angka hijau"
-}]
+    "question": "sebutkan bahasa inggris dari angka dua",
+    "CategoryId": 3, 
+    "optionA": "2 2"
+  },
+  {
+    "answer": "five five ",
+    "imgUrl": "https://media.tenor.com/vGUn9cej74MAAAAi/kstr-kochstrasse.gif",
+    "lvl": 2,
+    "question": "sebutkan bahasa inggris dari angka lima",
+    "CategoryId": 3,
+    "optionA": "5 5"
+  },
+  {
+    "answer": "seven",
+    "imgUrl": "https://media.tenor.com/f0oydzk-7YwAAAAi/oscars-cesag-cesag.gif",
+    "lvl": 3,
+    "question": "sebutkan bahasa inggris dari angka tujuh",
+    "CategoryId": 3
+  },
+  {
+    "answer": "four",
+    "imgUrl": "https://media.tenor.com/uw5BzjkALRgAAAAi/kstr-kochstrasse.gif",
+    "lvl": 4,
+    "question": "sebutkan bahasa inggris dari angka empat",
+    "CategoryId": 3
+  },
+  {
+    "answer": "three",
+    "imgUrl": "https://media.tenor.com/Er7lBj0OeWIAAAAi/rowing-rowingat.gif",
+    "lvl": 5,
+    "question": "sebutkan bahasa inggris dari angka tiga",
+    "CategoryId": 3
+  },
+  {
+    "answer": "nine",
+    "imgUrl": "https://media.tenor.com/2ABvSDu3pIwAAAAi/mijntje-nine.gif",
+    "lvl": 6,
+    "question": "sebutkan bahasa inggris dari angka sembilan",
+    "CategoryId": 3
+  },
+  {
+    "answer": "eleven",
+    "imgUrl": "https://media.baamboozle.com/uploads/images/469852/1634126414_369139_gif-url.gif",
+    "lvl": 7,
+    "question": "sebutkan bahasa inggris dari angka sebelas",
+    "CategoryId": 3
+  },
+  {
+    "answer": "fiveteen",
+    "imgUrl": "https://media1.giphy.com/media/F5wBXtQmDVIJXAqe8v/giphy.gif?cid=ecf05e47z629i5g1ps0mt1npu31mvx93judgck37q6z7eyy4&rid=giphy.gif&ct=g",
+    "lvl": 8,
+    "question": "sebutkan bahasa inggris dari angka lima belas",
+    "CategoryId": 3
+  },
+  {
+    "answer": "seventeen",
+    "imgUrl": "https://media.baamboozle.com/uploads/images/469852/1634126243_282305_gif-url.gif",
+    "lvl": 9,
+    "question": "sebutkan bahasa inggris dari angka tujuh belas",
+    "CategoryId": 3
+  },
+  {
+    "answer": "twenty",
+    "imgUrl": "https://media.baamboozle.com/uploads/images/308100/1623835025_310769_gif-url.gif",
+    "lvl": 10,
+    "question": "sebutkan bahasa inggris dari angka 20",
+    "CategoryId": 3
+  },
+  {
+    "answer": "white",
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2048px-Solid_white.svg.png",
+    "lvl": 11,
+    "question": "sebutkan bahasa inggris dari warna putih",
+    "CategoryId": 3
+  },
+  {
+    "answer": "black",
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/800px-A_black_image.jpg?20201103073518",
+    "lvl": 12,
+    "question": "sebutkan bahasa inggris dari angka hitam",
+    "CategoryId": 3
+  },
+  {
+    "answer": "blue",
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/512px-Solid_blue.svg.png?20150316143734",
+    "lvl": 13,
+    "question": "sebutkan bahasa inggris dari angka biru",
+    "CategoryId": 3
+  },
+  {
+    "answer": "red",
+    "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Solid_red.svg/512px-Solid_red.svg.png?20150316143248",
+    "lvl": 14,
+    "question": "sebutkan bahasa inggris dari angka merah",
+    "CategoryId": 3
+  },
+  {
+    "answer": "green",
+    "imgUrl": "https://htmlcolorcodes.com/assets/images/colors/grass-green-color-solid-background-1920x1080.png",
+    "lvl": 15,
+    "question": "sebutkan bahasa inggris dari angka hijau",
+    "CategoryId": 3
+  },
+  {
+    "answer": "banana",
+    "imgUrl": "https://media.tenor.com/fyI3I7EB0dIAAAAi/kstr-kochstrasse.gif",
+    "lvl": 16,
+    "question": "sebutkan bahasa inggris dari pisang",
+    "CategoryId": 3
+  },
+  {
+    "answer": "apple",
+    "imgUrl": "https://media.tenor.com/KH6u0yZQUe8AAAAi/apple-sour-fermentary.gif",
+    "lvl": 17,
+    "question": "sebutkan bahasa inggris dari apel",
+    "CategoryId": 3
+  },
+  {
+    "answer": "orange",
+    "imgUrl": "https://media.tenor.com/BIx4Th2lw04AAAAj/orange-fall-down.gif",
+    "lvl": 18,
+    "question": "sebutkan bahasa inggris dari jeruk",
+    "CategoryId": 3
+  },
+  {
+    "answer": "grape",
+    "imgUrl": "https://media.tenor.com/CviEO5YObBQAAAAi/grapes-purple.gif",
+    "lvl": 19,
+    "question": "sebutkan bahasa inggris dari anggur",
+    "CategoryId": 3
+  },
+  {
+    "answer": "watermelon",
+    "imgUrl": "https://media.tenor.com/dCTxLkqLqAUAAAAi/bakenswitch-watermelon.gif",
+    "lvl": 20,
+    "question": "sebutkan bahasa inggris dari semangka",
+    "CategoryId": 3
+  },
+  {
+    "answer": "strawberry",
+    "imgUrl": "https://media.tenor.com/trlfYDiC3vsAAAAi/strawberry.gif",
+    "lvl": 21,
+    "question": "sebutkan bahasa inggris dari stroberi",
+    "CategoryId": 3
+  },
+  {
+    "answer": "mango",
+    "imgUrl": "https://media.tenor.com/t3emyIXHqDUAAAAi/mango-food.gif",
+    "lvl": 22,
+    "question": "sebutkan bahasa inggris dari mangga",
+    "CategoryId": 3
+  },
+  {
+    "answer": "cat",
+    "imgUrl": "https://media.tenor.com/Fm8FYgSdTPEAAAAi/rolling-cat.gif",
+    "lvl": 23,
+    "question": "sebutkan bahasa inggris dari kucing",
+    "CategoryId": 3
+  },
+  {
+    "answer": "dog",
+    "imgUrl": "https://media.tenor.com/vyundhwy_HsAAAAM/doggie.gif",
+    "lvl": 24,
+    "question": "sebutkan bahasa inggris dari anjing",
+    "CategoryId": 3
+  },
+  {
+    "answer": "mouse",
+    "imgUrl": "https://media.tenor.com/FKT55Bbhfc4AAAAi/mouse-pizza.gif",
+    "lvl": 25,
+    "question": "sebutkan bahasa inggris dari tikus",
+    "CategoryId": 3
+  },
+  {
+    "answer": "lion",
+    "imgUrl": "https://media.tenor.com/ZwIIFgr4lWoAAAAi/lion-king.gif",
+    "lvl": 26,
+    "question": "sebutkan bahasa inggris dari singa",
+    "CategoryId": 3
+  },
+  {
+    "answer": "elephant",
+    "imgUrl": "https://media.tenor.com/fnMSklaZPvMAAAAj/canticos-elephant.gif",
+    "lvl": 27,
+    "question": "sebutkan bahasa inggris dari elephant",
+    "CategoryId": 3
+  },
+  {
+    "answer": "bird",
+    "imgUrl": "https://media.tenor.com/J_0i11cOZmcAAAAi/bird.gif",
+    "lvl": 28,
+    "question": "sebutkan bahasa inggris dari burung",
+    "CategoryId": 3
+  },
+  {
+    "answer": "fish",
+    "imgUrl": "https://media.tenor.com/7SGlANK3kFEAAAAi/dm4uz3-foekoe.gif",
+    "lvl": 29,
+    "question": "sebutkan bahasa inggris dari ikan",
+    "CategoryId": 3
+  },
+  {
+    "answer": "turtles",
+    "imgUrl": "https://media.tenor.com/AdXl1uIhQfMAAAAi/turtle-carlbot.gif",
+    "lvl": 30,
+    "question": "sebutkan bahasa inggris dari kura-kura",
+    "CategoryId": 3
+  }
+]

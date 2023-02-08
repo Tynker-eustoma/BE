@@ -1,4 +1,5 @@
 [{
+<<<<<<< HEAD
   "answer": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipground.com%2Fimages%2Fanime-gif-animated-clipart-20.gif&f=1&nofb=1&ipt=b74bb40ae248c5d6bd51481ed22810712efcf200f11d0928c8fcf405aca790ac&ipo=images",
   "lvl": 1,
   "question": "snake",
@@ -8,3 +9,106 @@
   "optionC": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipground.com%2Fimages%2Fanime-gif-animated-clipart-20.gif&f=1&nofb=1&ipt=b74bb40ae248c5d6bd51481ed22810712efcf200f11d0928c8fcf405aca790ac&ipo=images",
   "optionD": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipground.com%2Fimages%2Fanime-gif-animated-clipart-20.gif&f=1&nofb=1&ipt=b74bb40ae248c5d6bd51481ed22810712efcf200f11d0928c8fcf405aca790ac&ipo=images"
 }]
+=======
+    "imgUrl": "https://i.imgur.com/9q8ZBR4.jpg",
+    "answer": "2",
+    "lvl": 1,
+    "question": "ada berapa macan dalam gambar tersebut? yuk coba hitung!",
+    "CategoryId": 2,
+    "optionA": "3",
+    "optionB": "1",
+    "optionC": "2",
+    "optionD": "4"
+  }, {
+    "imgUrl": "https://i.imgur.com/sEIxa5X.jpg",
+    "answer": "7",
+    "lvl": 2,
+    "question": "ada berapa kambing dalam gambar tersebut? yuk coba hitung!",
+    "CategoryId": 2,
+    "optionA": "6",
+    "optionB": "7",
+    "optionC": "5",
+    "optionD": "8"
+  }, {
+    "imgUrl": "https://i.imgur.com/152hco9.jpg",
+    "answer": "5",
+    "lvl": 3,
+    "question": "ada berapa sapi dalam gambar tersebut? yuk coba hitung!",
+    "CategoryId": 2,
+    "optionA": "5",
+    "optionB": "4",
+    "optionC": "6",
+    "optionD": "3"
+  },{
+    "imgUrl": "https://i.imgur.com/5XfGOeQ.jpg",
+    "answer": "3",
+    "lvl": 4,
+    "question": "ada berapa kukang dalam gambar tersebut? yuk coba hitung!",
+    "CategoryId": 2,
+    "optionA": "4",
+    "optionB": "3",
+    "optionC": "2",
+    "optionD": "5"
+  }, {
+    "imgUrl": "https://i.imgur.com/uV4XwKy.jpg",
+    "answer": "2",
+    "lvl": 5,
+    "question": "ada berapa jerapah dalam gambar tersebut? yuk coba hitung!",
+    "CategoryId": 2,
+    "optionA": "4",
+    "optionB": "3",
+    "optionC": "2",
+    "optionD": "5"
+  }, {
+    "imgUrl": "https://i.imgur.com/A2su4Q6.png",
+    "answer": "7",
+    "lvl": 6,
+    "question": "ada berapa burung dalam gambar tersebut? yuk coba hitung!",
+    "CategoryId": 2,
+    "optionA": "7",
+    "optionB": "6",
+    "optionC": "8",
+    "optionD": "5"
+  }, {
+    "imgUrl": "https://i.imgur.com/Gd9JmeS.png",
+    "answer": "6",
+    "lvl": 8,
+    "question": "ada berapa monyet dalam gambar tersebut? yuk coba hitung!",
+    "CategoryId": 2,
+    "optionA": "7",
+    "optionB": "5",
+    "optionC": "8",
+    "optionD": "6"
+  }, {
+    "imgUrl": "https://i.imgur.com/s01niJt.png",
+    "answer": "8",
+    "lvl": 9,
+    "question": "ada berapa domba dalam gambar tersebut? yuk coba hitung!",
+    "CategoryId": 2,
+    "optionA": "7",
+    "optionB": "8",
+    "optionC": "9",
+    "optionD": "6"
+  },{
+    "imgUrl": "https://i.imgur.com/vQG1fFE.png",
+    "answer": "5",
+    "lvl": 10,
+    "question": "ada berapa jumlah kukang dan burung dalam gambar tersebut? yuk coba hitung!",
+    "CategoryId": 2,
+    "optionA": "5",
+    "optionB": "8",
+    "optionC": "9",
+    "optionD": "6"
+  }, {
+    "imgUrl": "https://i.imgur.com/vQG1fFE.png",
+    "answer": "5",
+    "lvl": 11,
+    "question": "ada berapa jumlah kukang dan burung dalam gambar tersebut? yuk coba hitung!",
+    "CategoryId": 2,
+    "optionA": "5",
+    "optionB": "8",
+    "optionC": "9",
+    "optionD": "6"
+  }]
+  
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a

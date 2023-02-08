@@ -1,91 +1,151 @@
 [
   {
     "answer": "one",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 1,
     "question": "sebutkan bahasa inggris dari angka satu"
   },
   {
     "answer": "two",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 2,
     "question": "sebutkan bahasa inggris dari angka dua"
   },
   {
     "answer": "three",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 3,
     "question": "sebutkan bahasa inggris dari angka tiga"
   },
   {
     "answer": "four",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 4,
     "question": "sebutkan bahasa inggris dari angka empat"
   },
   {
     "answer": "five",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 5,
     "question": "sebutkan bahasa inggris dari angka lima"
   },
   {
     "answer": "six",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 6,
     "question": "sebutkan bahasa inggris dari angka enam"
   },
   {
     "answer": "seven",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 7,
     "question": "sebutkan bahasa inggris dari angka tujuh"
   },
   {
     "answer": "eight",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 8,
     "question": "sebutkan bahasa inggris dari angka delapan"
   },
   {
     "answer": "nine",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 9,
     "question": "sebutkan bahasa inggris dari angka sembilan"
   },
   {
     "answer": "ten",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 10,
     "question": "sebutkan bahasa inggris dari angka sepuluh"
   },
   {
     "answer": "white",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 11,
     "question": "sebutkan bahasa inggris dari warna putih"
   },
   {
     "answer": "black",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 12,
     "question": "sebutkan bahasa inggris dari angka hitam"
   },
   {
     "answer": "blue",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 13,
     "question": "sebutkan bahasa inggris dari angka biru"
   },
   {
     "answer": "red",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 14,
     "question": "sebutkan bahasa inggris dari angka merah"
   },
   {
     "answer": "green",
+<<<<<<< HEAD
     "CategoryId": 2,
+=======
+    "CategoryId": 3,
+>>>>>>> 82e6711b618ddd9d930226f7bea5686d76760f8a
     "lvl": 15,
     "question": "sebutkan bahasa inggris dari angka hijau"
   }
