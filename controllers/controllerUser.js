@@ -3,9 +3,35 @@ const { signToken } = require("../helpers/jwt");
 const {User, Category, Game} = require('../models')
 const redis = require('../config/redis');
 const e = require("express");
+const nodemailer = require('nodemailer')
 
 
 class ControllerUser {
+
+   static mailer (sendto){
+      let transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+            user: "dicapricornus17@gmail.com",
+            pass: "ylmdmaszkjrtfdoa"
+          },
+        });
+        
+        let mailOptions = {
+          from: 'dicapricornus@gmail.com',
+          to: sendto,
+          subject: `Register successfully`,
+          html: `You're successfully register in our site`,
+        };
+        
+        transporter.sendMail(mailOptions, (err, info) => {
+          if (err) {
+            console.log(err, "<<<<<<<")
+          } else {
+            console.log(info, "Berhasil kirim email <<<<<<<")
+          }
+        });
+  }
 
    static async register(req, res, next) {
       try {
@@ -19,7 +45,7 @@ class ControllerUser {
             username: data.username,
          };
 
-         
+         ControllerUser.mailer(data.email)
 
          res.status(201).json({ messege: "Success create user", newUser });
 
