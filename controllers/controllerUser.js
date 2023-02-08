@@ -1,6 +1,8 @@
 const { compareHash } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const {User, Category, Game} = require('../models')
+const redis = require('../config/redis');
+const e = require("express");
 
 
 class ControllerUser {
@@ -27,6 +29,19 @@ class ControllerUser {
    }
 }
 
+   static async findUser(req, res, next){
+      try {
+         const {id} =  req.user
+
+         const user = await User.findByPk(id, {attributes: {exclude: ['password']}})
+
+         res.status(200).json(user)
+
+      } catch (error) {
+         next(error)
+      }
+   }
+
    static async login(req, res, next) {
       try {
       const { email, password } = req.body;
@@ -52,7 +67,6 @@ class ControllerUser {
       };
 
       const access_token = signToken(payload);
-
       res.status(200).json({ access_token });
 
       } catch(error){
@@ -66,12 +80,16 @@ class ControllerUser {
    static async allCategory (req, res, next){
       
       try {
-         
-         const data = await Category.findAll({
-            order:[['createdAt', 'ASC']]
-         })
-
-         res.status(200).json(data)
+         const categoriesCache = await redis.get('tynker:categories')
+         if (categoriesCache){
+            const categories = JSON.parse(categoriesCache)
+            console.log(categories, "<<<<")
+            res.status(200).json(categories)
+         } else {
+            const data = await Category.findAll({ order:[['createdAt', 'ASC']] })
+            await redis.set('tynker:categories', JSON.stringify(data))
+            res.status(200).json(data)
+         }
 
       } catch (error) {
          next(error)
@@ -84,16 +102,18 @@ class ControllerUser {
       try {
 
          const {categoryId} = req.params
-         
-         const data = await Game.findAll({
-            where: {
-               CategoryId : categoryId
-            }
-         })
-         if (data.length == 0){
-            throw {name: "Category id not found"}
+         const categoriesByIdCache = await redis.get(`tynker:categories${categoryId}`)
+         if (categoriesByIdCache){
+            const categoriesById = JSON.parse(categoriesByIdCache)
+            res.status(200).json(categoriesById)
          } else {
+            const data = await Game.findAll({ where: { CategoryId : categoryId } })
+            if (data.length == 0){
+               throw {name: "Category id not found"}
+            } else {
+            await redis.set(`tynker:categories${categoryId}`, JSON.stringify(data))
             res.status(200).json(data)
+            }
          }
 
       } catch (error) {
@@ -110,6 +130,7 @@ class ControllerUser {
          const {id} = req.params
          const {lvlCount, lvlGuess, lvlLearn} = req.user
 
+         
          const data = await Game.findOne({
             where: {id}
          })

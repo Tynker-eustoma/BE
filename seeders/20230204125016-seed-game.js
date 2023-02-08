@@ -1,4 +1,5 @@
 'use strict';
+const fs = require('fs')
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -12,9 +13,20 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    const counting = require('../db/counting.json')
-    counting.forEach(el => {
-     el.createdAt = el.updatedAt = new Date()
+
+    const counting = JSON.parse(fs.readFileSync('./db/Counting.json', 'utf-8')).map(x => {
+      x.createdAt = x.updatedAt = new Date()
+      return x
+    })
+
+    const guessing = JSON.parse(fs.readFileSync('./db/guessing.json', 'utf-8')).map(x => {
+      x.createdAt = x.updatedAt = new Date()
+      return x
+    })
+
+    const learning = JSON.parse(fs.readFileSync('./db/learning.json', 'utf-8')).map(x => {
+      x.createdAt = x.updatedAt = new Date()
+      return x
     })
 
     const categories = require('../db/category.json')
@@ -24,6 +36,8 @@ module.exports = {
 
     await queryInterface.bulkInsert('Categories', categories)
     await queryInterface.bulkInsert('Games', counting)
+    await queryInterface.bulkInsert('Games', guessing)
+    await queryInterface.bulkInsert('Games', learning)
   },
 
   async down (queryInterface, Sequelize) {
@@ -33,7 +47,7 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    await queryInterface.bulkDelete('Categories', null, {})
-    await queryInterface.bulkDelete('Games', null, {})
+    await queryInterface.bulkDelete('Games', null, { truncate: true, cascade: true, restartIdentity: true })
+    await queryInterface.bulkDelete('Categories', null, { truncate: true, cascade: true, restartIdentity: true })
   }
 };

@@ -4,6 +4,7 @@ const { sequelize, User } = require("../models");
 const { signToken } = require('../helpers/jwt')
 const fs = require('fs')
 let token
+let token2
 beforeAll(async () => {
   try {
     await User.create({
@@ -19,6 +20,7 @@ beforeAll(async () => {
       updatedAt: new Date(),
     });
     token = signToken({ id: 1 });
+    token2 = signToken({ id: 2 });
     const newData = JSON.parse(fs.readFileSync('./_test_/data/category.json', 'utf-8')).map(x => {
       x.createdAt = x.updatedAt = new Date()
       return x
@@ -34,7 +36,7 @@ afterAll(async () => {
   await sequelize.queryInterface.bulkDelete("Users", null, { truncate: true, cascade: true, restartIdentity: true });
 })
 
-describe.skip("Category", () => {
+describe("Category", () => {
   describe("GET /category", () => {
     it("Should fetch category", () => {
       return request(app)
@@ -57,5 +59,42 @@ describe.skip("Category", () => {
           expect(response.body).toHaveProperty("message", expect.any(String));
         });
     });
+
+    it("Shouldnot fetch category and fail response (Access token is not found)", () => {
+      return request(app)
+        .get("/pub/category")
+        .set('access_token', "akjsdajksdh")
+        .then((response) => {
+          expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
+
+    it("Should find user", () => {
+      return request(app)
+        .get("/pub/find")
+        .set('access_token', token)
+        .then((response) => {
+          expect(response.status).toBe(200);
+          expect(response).toHaveProperty("body", expect.any(Object));
+          expect(response.body).toHaveProperty("username", expect.any(String));
+          expect(response.body).toHaveProperty("email", expect.any(String));
+          expect(response.body).toHaveProperty("age", expect.any(Number));
+          expect(response.body).toHaveProperty("createdAt", expect.any(String));
+          expect(response.body).toHaveProperty("updatedAt", expect.any(String));
+        });
+    });
+
+    it("Shouldnot find user", () => {
+      return request(app)
+        .get("/pub/find")
+        .set('access_token', token2)
+        .then((response) => {
+          expect(response.status).toBe(401);
+          expect(response.body).toHaveProperty("message", expect.any(String));
+        });
+    });
   });
+
+  
 });

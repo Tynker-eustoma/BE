@@ -135,6 +135,10 @@ class ControllerAdmin {
          const {id} = req.params
          const {name} = req.body
 
+         if (!name){
+            throw {name: "Category name is required for update"}
+         }
+
          const check = await Category.findOne({
             where: {
                id
