@@ -19,7 +19,7 @@ class ControllerUser {
             username: data.username,
          };
 
-         console.log(newUser, "<<<<<<<<<<<<<<<<<<<")
+         
 
          res.status(201).json({ messege: "Success create user", newUser });
 
@@ -166,10 +166,11 @@ class ControllerUser {
       try {
          
          const {categoryId} = req.params
+         const {lvl} = req.body
 
          const user = await User.findByPk(req.user.id)
 
-         //error handling
+         console.log(lvl, "lvl dari controllerrrrrrrrrrrrrrrrrrrrrr")
 
          if(+categoryId > 3) {
             throw {name: 'Category id not found'}
@@ -178,35 +179,44 @@ class ControllerUser {
          // Kondisi Update
 
          if(+categoryId === 1){
-            const lvlCount = user.lvlCount + 1
-            await User.update({lvlCount}, {
-               where: {
-                  id : req.user.id
-               }
-            })
+            if(user.lvlCount < +lvl){
+               console.log('masukkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk')
+               const lvlCount = user.lvlCount + 1
+               await User.update({lvlCount}, {
+                  where: {
+                     id : req.user.id
+                  }
+               })
+               req.user.lvlCount = lvlCount
+            }
          }
 
          if(+categoryId === 2){
-
-            const lvlGuess = user.lvlGuess + 1
-            await User.update({lvlGuess}, {
+            if(user.lvlGuess < +lvl){
+               const lvlGuess = user.lvlGuess + 1
+               await User.update({lvlGuess}, {
                where: {
                   id : req.user.id
                }
             })
+               req.user.lvlGuess = lvlGuess
+            }
          }
 
          if(+categoryId === 3){
-
-            const lvlLearn = user.lvlLearn + 1
-            await User.update({lvlLearn}, {
+            if(user.lvlLearn < +lvl){
+               const lvlLearn = user.lvlLearn + 1
+               await User.update({lvlLearn}, {
                where: {
                   id : req.user.id
                }
             })
+            req.user.lvlLearn = lvlLearn
+            }
          }
 
-
+         
+         
          res.status(200).json({message: 'Success update level user with id =' + user.id})
 
       } catch (error) {
